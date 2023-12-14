@@ -133,6 +133,27 @@ async function current(req, res) {
     res.json({ email, subscription });
 }
 
+const removeUser = async (req, res) => {
+    const { email, password } = req.body;
+    const { _id } = req.user;
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        throw HttpError(401, "Email or password are incorrect");
+    }
+    const userPassword = bcrypt.compareSync(password, user.password);
+    if (!userPassword) {
+        throw HttpError(401, "Email or password are incorrect");
+    }
+
+    const removedUser = await User.findByIdAndRemove(_id);
+    if (!removedUser) {
+        throw HttpError(404);
+    }
+
+    res.status(204).json({ message: "User credentials removed successfull!" });
+};
+
 module.exports = {
     registration: MethodWrapper(registration),
     confirmEmail: MethodWrapper(confirmEmail),
@@ -140,4 +161,5 @@ module.exports = {
     login: MethodWrapper(login),
     logout: MethodWrapper(logout),
     current: MethodWrapper(current),
+    removeUser: MethodWrapper(removeUser),
 };

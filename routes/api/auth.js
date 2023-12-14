@@ -19,4 +19,6 @@ router.post("/logout", parseJSON, authentification, mode.logout);
 
 router.get("/current", parseJSON, authentification, mode.current);
 
+router.delete("/delete", parseJSON, authentification, mode.removeUser);
+
 module.exports = router;
