@@ -6,6 +6,7 @@ require("dotenv").config();
 const multer = require("multer");
 
 // const { authRouter, contactsRouter } = require("./routes/api");
+const { authRouter } = require("../routes");
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(cors());
 // app.use(express.json());
 app.use(express.static("public"));
 
-// app.use("/users", authRouter);
+app.use("/auth", authRouter);
 // app.use("/api/contacts", contactsRouter);
 
 app.use((req, res) => {

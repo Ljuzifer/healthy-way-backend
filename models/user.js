@@ -61,6 +61,15 @@ const userSchema = new Schema(
         BMR: {
             type: Number,
         },
+        fat: {
+            type: Number,
+        },
+        protein: {
+            type: Number,
+        },
+        carbohydrate: {
+            type: Number,
+        },
     },
     {
         versionKey: false,
@@ -68,9 +77,40 @@ const userSchema = new Schema(
     },
 );
 
-userSchema.pre("save", (next) => {
-    const { gender, height, weight, age, activityRatio } = this;
+userSchema.pre("save", function (next) {
+    const { gender, height, weight, age, activityRatio, goal } = this;
     this.BMR = IdentifyBMR({ gender, height, weight, age, activityRatio });
+
+    let proteinPercentage, fatPercentage;
+
+    switch (goal) {
+        case "Lose fat":
+            proteinPercentage = 0.25;
+            fatPercentage = 0.2;
+            break;
+        case "Gain Muscle":
+            proteinPercentage = 0.3;
+            fatPercentage = 0.2;
+            break;
+        case "Maintain":
+            proteinPercentage = 0.2;
+            fatPercentage = 0.25;
+            break;
+        default:
+            proteinPercentage = 0.25;
+            fatPercentage = 0.2;
+    }
+
+    const carbPercentage = 1 - (proteinPercentage + fatPercentage);
+
+    const protein = Math.round((proteinPercentage * this.BMR) / 4);
+    const fat = Math.round((fatPercentage * this.BMR) / 9);
+    const carbohydrate = Math.round((carbPercentage * this.BMR) / 4);
+
+    this.fat = fat;
+    this.protein = protein;
+    this.carbohydrate = carbohydrate;
+
     next();
 });
 

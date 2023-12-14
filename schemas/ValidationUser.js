@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const registerationSchema = Joi.object({
+const registrationSchema = Joi.object({
     name: Joi.string().min(2),
     email: Joi.string().email(),
     password: Joi.string().min(6).max(16),
@@ -13,5 +13,5 @@ const registerationSchema = Joi.object({
 });
 
 module.exports = {
-    registerationSchema,
+    registrationSchema,
 };
