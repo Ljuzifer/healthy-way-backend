@@ -70,6 +70,14 @@ const userSchema = new Schema(
         carbohydrate: {
             type: Number,
         },
+        verify: {
+            type: Boolean,
+            default: false,
+        },
+        verificationToken: {
+            type: String,
+            default: "",
+        },
     },
     {
         versionKey: false,
