@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
-const { HttpError } = require("./helpers/HttpError");
+const { HttpError } = require("../helpers/HttpError");
 require("dotenv").config();
 const multer = require("multer");
 
