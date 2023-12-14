@@ -138,4 +138,6 @@ module.exports = {
     confirmEmail: MethodWrapper(confirmEmail),
     resendConfirmEmail: MethodWrapper(resendConfirmEmail),
     login: MethodWrapper(login),
+    logout: MethodWrapper(logout),
+    current: MethodWrapper(current),
 };
