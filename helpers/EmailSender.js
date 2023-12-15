@@ -30,7 +30,7 @@ async function EmailSender(mail, code) {
         to: mail,
         from: HOT_MAIL,
         subject: "Verify your email please!",
-        html: `<a target="_blank" href="${BASE_LOCAL_URL}/auth/verify/${code}">Click to verify your email</a>`,
+        html: `<a target="_blank" href="${BASE_RENDER_URL}/auth/verify/${code}">Click to verify your email</a>`,
     };
 
     await transport.sendMail(email);
