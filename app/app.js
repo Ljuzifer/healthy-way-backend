@@ -6,7 +6,7 @@ require("dotenv").config();
 const multer = require("multer");
 
 // const { authRouter, contactsRouter } = require("./routes/api");
-const { authRouter, recommendedRouter } = require("../routes");
+const { authRouter, goalRouter, recommendedRouter } = require("../routes");
 // const { recommendedRouter } = require("../routes");
 
 const app = express();
@@ -18,8 +18,9 @@ app.use(cors());
 // app.use(express.json());
 app.use(express.static("public"));
 
-app.use("/auth", authRouter);
-app.use("/user/recommended-food", recommendedRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/user/goal", goalRouter);
+app.use("/api/user/recommended-food", recommendedRouter);
 // app.use("/api/contacts", contactsRouter);
 
 app.use((req, res) => {

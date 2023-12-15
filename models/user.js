@@ -32,7 +32,7 @@ const userSchema = new Schema(
         },
         goal: {
             type: String,
-            enum: ["Lose fat", "Maintain", "Gain Muscle"],
+            enum: ["Lose fat", "Maintain", "Gain muscle"],
             required: true,
         },
         gender: {
@@ -100,7 +100,7 @@ userSchema.pre("save", function (next) {
             proteinPercentage = 0.25;
             fatPercentage = 0.2;
             break;
-        case "Gain Muscle":
+        case "Gain muscle":
             proteinPercentage = 0.3;
             fatPercentage = 0.2;
             break;

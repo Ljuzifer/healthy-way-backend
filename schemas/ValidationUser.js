@@ -4,7 +4,7 @@ const registrationSchema = Joi.object({
     name: Joi.string().min(2).required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(6).max(16).required(),
-    goal: Joi.string().valid("Lose fat", "Maintain", "Gain Muscle").required(),
+    goal: Joi.string().valid("Lose fat", "Maintain", "Gain muscle").required(),
     gender: Joi.string().valid("Male", "Female").required(),
     age: Joi.number().integer().required(),
     height: Joi.number().min(140).max(240).required(),

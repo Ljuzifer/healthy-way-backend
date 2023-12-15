@@ -90,10 +90,9 @@ async function resendConfirmEmail(req, res) {
 // signin //
 async function login(req, res) {
     const { email, password } = req.body;
-    console.log(email);
 
     const user = await User.findOne({ email });
-    console.log(user);
+
     if (!user) {
         throw HttpError(401, "Email or password are incorrect");
     }
