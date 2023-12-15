@@ -6,7 +6,7 @@ const { GMAIL_MAIL, GMAIL_PASS, BASE_RENDER_URL, BASE_LOCAL_URL } = process.env;
 
 const mailerConfig = {
     pool: true,
-    host: "smtp-relay.gmail.com",
+    host: "smtp.gmail.com",
     // host: "smtp.meta.ua",
     // host: "smtp.mail.yahoo.com",
     port: 465,
@@ -29,7 +29,7 @@ async function EmailSender(mail, code) {
         to: mail,
         from: GMAIL_MAIL,
         subject: "Verify your email please!",
-        html: `<a target="_blank" href="${BASE_LOCAL_URL}/auth/verify/${code}">Click to verify your email</a>`,
+        html: `<a target="_blank" href="${BASE_RENDER_URL}/auth/verify/${code}">Click to verify your email</a>`,
     };
 
     await transport.sendMail(email);
