@@ -1,20 +1,21 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const { META_PASS, META_MAIL, BASE_LOCAL_URL } = process.env;
+// const { META_PASS, META_MAIL, BASE_LOCAL_URL } = process.env;
 // const { GMAIL_MAIL, GMAIL_PASS, BASE_RENDER_URL, BASE_LOCAL_URL } = process.env;
+const { HOT_MAIL, HOT_PASS, BASE_RENDER_URL, BASE_LOCAL_URL } = process.env;
 
 const mailerConfig = {
-    // pool: true,
+    pool: true,
     // host: "smtp.gmail.com",
-    host: "smtp.meta.ua",
-    // host: "smtp.mail.yahoo.com",
-    port: 465,
-    secure: true,
+    // host: "smtp.meta.ua",
+    host: "smtp-mail.outlook.com",
+    port: 587,
+    secure: false,
     // requireTLS: true,
     auth: {
-        user: META_MAIL,
-        pass: META_PASS,
+        user: HOT_MAIL,
+        pass: HOT_PASS,
     },
     // tls: {
     //     // do not fail on invalid certs
@@ -27,7 +28,7 @@ const transport = nodemailer.createTransport(mailerConfig);
 async function EmailSender(mail, code) {
     const email = {
         to: mail,
-        from: META_MAIL,
+        from: HOT_MAIL,
         subject: "Verify your email please!",
         html: `<a target="_blank" href="${BASE_LOCAL_URL}/auth/verify/${code}">Click to verify your email</a>`,
     };
