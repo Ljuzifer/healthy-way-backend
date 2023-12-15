@@ -6,12 +6,12 @@ const { GMAIL_MAIL, GMAIL_PASS, BASE_RENDER_URL, BASE_LOCAL_URL } = process.env;
 
 const mailerConfig = {
     pool: true,
-    host: "smtp.gmail.com",
+    host: "smtp-relay.gmail.com",
     // host: "smtp.meta.ua",
     // host: "smtp.mail.yahoo.com",
     port: 465,
-    secure: false,
-    // requireTLS: true,
+    secure: true,
+    requireTLS: true,
     auth: {
         user: GMAIL_MAIL,
         pass: GMAIL_PASS,
