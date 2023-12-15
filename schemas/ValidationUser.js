@@ -9,7 +9,7 @@ const registrationSchema = Joi.object({
     age: Joi.number().integer().required(),
     height: Joi.number().min(140).max(240).required(),
     weight: Joi.number().min(40).max(220).required(),
-    activityRatio: Joi.number().min(1.2).max(2.5).required(),
+    activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9).required(),
 });
 
 const LoginSchema = Joi.object({

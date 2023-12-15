@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const { MongooseError, IdentifyBMR } = require("../helpers");
+const { MongooseError, IdentifyBMR, NeededWater } = require("../helpers");
 const gravatar = require("gravatar");
 
 const userSchema = new Schema(
@@ -54,9 +54,8 @@ const userSchema = new Schema(
         },
         activityRatio: {
             type: Number,
+            enam: [1.2, 1.375, 1.55, 1.725, 1.9],
             required: true,
-            min: 1.2,
-            max: 2.5,
         },
         BMR: {
             type: Number,
@@ -68,6 +67,9 @@ const userSchema = new Schema(
             type: Number,
         },
         carbohydrate: {
+            type: Number,
+        },
+        baseWater: {
             type: Number,
         },
         verify: {
@@ -88,6 +90,8 @@ const userSchema = new Schema(
 userSchema.pre("save", function (next) {
     const { gender, height, weight, age, activityRatio, goal } = this;
     this.BMR = IdentifyBMR({ gender, height, weight, age, activityRatio });
+
+    this.baseWater = NeededWater(weight, activityRatio);
 
     let proteinPercentage, fatPercentage;
 
