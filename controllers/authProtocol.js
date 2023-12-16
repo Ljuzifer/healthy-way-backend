@@ -8,7 +8,7 @@ const { JWT_SECRET_KEY } = process.env;
 
 // SignUp //
 const registration = async (req, res) => {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
     const user = await User.findOne({ email }).exec();
 
     if (user) {
@@ -29,7 +29,7 @@ const registration = async (req, res) => {
     });
     await answer.save();
 
-    await EmailSender(email, verificationToken);
+    await EmailSender(email, name, verificationToken);
 
     res.status(201).json({
         user: {
