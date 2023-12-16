@@ -2,10 +2,10 @@ const { MethodWrapper, HttpError } = require("../helpers");
 const { User } = require("../models");
 
 const updateUserGoal = async (req, res) => {
-    const { _id } = req.user;
+    const { _id: owner } = req.user;
     const { goal } = req.body;
 
-    const user = await User.findByIdAndUpdate(_id, { goal }, { new: true }).exec();
+    const user = await User.findByIdAndUpdate(owner, { goal }, { new: true }).exec();
 
     if (!user) {
         throw HttpError(404, "That user not found...");
@@ -13,7 +13,7 @@ const updateUserGoal = async (req, res) => {
 
     await user.save();
 
-    res.status(200).json({
+    res.status(201).json({
         goal: user.goal,
     });
 };

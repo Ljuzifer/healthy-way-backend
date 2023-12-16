@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Weight, Water } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
@@ -15,9 +15,6 @@ const registration = async (req, res) => {
         throw HttpError(409, "This email is exist already");
     }
 
-    // const createBMR = IdentifyBMR(gender, age, height, weight, activityRatio);
-    // console.log(createBMR);
-
     const salt = bcrypt.genSaltSync(13);
     const hashedPassword = bcrypt.hashSync(password, salt);
     const verificationToken = crypto.randomUUID();
@@ -27,6 +24,17 @@ const registration = async (req, res) => {
         password: hashedPassword,
         verificationToken,
     });
+
+    await Weight.create({
+        weight: answer.weight,
+        owner: answer._id,
+    });
+
+    await Water.create({
+        water: 0,
+        owner: answer._id,
+    });
+
     await answer.save();
 
     await EmailSender(email, name, verificationToken);

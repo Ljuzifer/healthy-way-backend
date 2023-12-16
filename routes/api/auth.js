@@ -1,8 +1,8 @@
 const { Router, json } = require("express");
-const { JoiValidate } = require("../../middlewares");
-const { registrationSchema, EmailSchema, LoginSchema } = require("../../schemas/ValidationUser");
+const { JoiValidate, authentification } = require("../../middlewares");
+const { registrationSchema, emailSchema, loginSchema } = require("../../schemas/ValidationUser");
 const mode = require("../../controllers/authProtocol");
-const authentification = require("../../middlewares/authentification");
+// const authentification = require("../../middlewares/authentification");
 
 const router = Router();
 const parseJSON = json();
@@ -11,9 +11,9 @@ router.post("/registration", parseJSON, JoiValidate(registrationSchema), mode.re
 
 router.get("/verify/:verificationToken", mode.confirmEmail);
 
-router.post("/verify", parseJSON, JoiValidate(EmailSchema), mode.resendConfirmEmail);
+router.post("/verify", parseJSON, JoiValidate(emailSchema), mode.resendConfirmEmail);
 
-router.post("/login", parseJSON, JoiValidate(LoginSchema), mode.login);
+router.post("/login", parseJSON, JoiValidate(loginSchema), mode.login);
 
 router.post("/logout", parseJSON, authentification, mode.logout);
 

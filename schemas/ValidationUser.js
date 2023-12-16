@@ -12,17 +12,35 @@ const registrationSchema = Joi.object({
     activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9).required(),
 });
 
-const LoginSchema = Joi.object({
+const loginSchema = Joi.object({
     email: Joi.string().email().required(),
     password: Joi.string().min(6).max(16).required(),
 });
 
-const EmailSchema = Joi.object({
+const emailSchema = Joi.object({
     email: Joi.string().email().required(),
+});
+
+const goalSchema = Joi.object({
+    goal: Joi.string()
+        .valid("Lose fat", "Maintain", "Gain muscle")
+        .required()
+        .messages({ "any.required": "Enter your goal please" }),
+});
+
+const weightSchema = Joi.object({
+    weight: Joi.number().required().messages({ "any.required": "Enter your weight please" }),
+});
+
+const waterSchema = Joi.object({
+    water: Joi.number().unit("milliliters").required().messages({ "any.required": "Enter your water please" }),
 });
 
 module.exports = {
     registrationSchema,
-    LoginSchema,
-    EmailSchema,
+    loginSchema,
+    emailSchema,
+    goalSchema,
+    weightSchema,
+    waterSchema,
 };

@@ -5,9 +5,7 @@ const { HttpError } = require("../helpers/HttpError");
 require("dotenv").config();
 const multer = require("multer");
 
-// const { authRouter, contactsRouter } = require("./routes/api");
-const { authRouter, goalRouter, recommendedRouter } = require("../routes");
-// const { recommendedRouter } = require("../routes");
+const { authRouter, goalRouter, weightRouter, waterRouter, recommendedRouter } = require("../routes");
 
 const app = express();
 
@@ -20,8 +18,9 @@ app.use(express.static("public"));
 
 app.use("/api/auth", authRouter);
 app.use("/api/user/goal", goalRouter);
+app.use("/api/user/weight", weightRouter);
+app.use("/api/user/water", waterRouter);
 app.use("/api/user/recommended-food", recommendedRouter);
-// app.use("/api/contacts", contactsRouter);
 
 app.use((req, res) => {
     res.status(404).json({ message: "Not found" });

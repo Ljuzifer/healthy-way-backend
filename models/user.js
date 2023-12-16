@@ -59,22 +59,28 @@ const userSchema = new Schema(
         },
         BMR: {
             type: Number,
+            required: true,
         },
         fat: {
             type: Number,
+            required: true,
         },
         protein: {
             type: Number,
+            required: true,
         },
         carbohydrate: {
             type: Number,
+            required: true,
         },
         baseWater: {
             type: Number,
+            required: true,
         },
         verify: {
             type: Boolean,
             default: false,
+            required: true,
         },
         verificationToken: {
             type: String,
