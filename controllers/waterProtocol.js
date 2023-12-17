@@ -28,14 +28,14 @@ const updateWater = async (req, res, next) => {
 
     if (!isWaterToday) {
         const drunkWater = await Water.create({ owner, water });
-        console.log(drunkWater);
+
         res.status(201).json({
             water: drunkWater.water,
         });
     } else {
-        const { _id: id, water: consumed } = isWaterToday;
+        const { _id, water: consumed } = isWaterToday;
         const updatedWater = await Water.findOneAndUpdate(
-            { id, createdAt: { $gte: startTime, $lte: endTime } },
+            { _id, createdAt: { $gte: startTime, $lte: endTime } },
             { water: water + consumed },
             { new: true },
         ).exec();

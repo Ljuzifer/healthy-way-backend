@@ -5,7 +5,7 @@ const { HttpError } = require("../helpers/HttpError");
 require("dotenv").config();
 const multer = require("multer");
 
-const { authRouter, goalRouter, weightRouter, waterRouter, recommendedRouter } = require("../routes");
+const { authRouter, goalRouter, weightRouter, waterRouter, recommendedRouter, userRouter } = require("../routes");
 
 const app = express();
 
@@ -17,6 +17,7 @@ app.use(cors());
 app.use(express.static("public"));
 
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 app.use("/api/user/goal", goalRouter);
 app.use("/api/user/weight", weightRouter);
 app.use("/api/user/water", waterRouter);

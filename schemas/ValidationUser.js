@@ -12,6 +12,14 @@ const registrationSchema = Joi.object({
     activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9).required(),
 });
 
+const userUpdateSchema = Joi.object({
+    name: Joi.string().min(2).required(),
+    gender: Joi.string().valid("Male", "Female").required(),
+    age: Joi.number().integer().required(),
+    height: Joi.number().min(140).max(240).required(),
+    activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9).required(),
+});
+
 const loginSchema = Joi.object({
     email: Joi.string().email().required(),
     password: Joi.string().min(6).max(16).required(),
@@ -38,6 +46,7 @@ const waterSchema = Joi.object({
 
 module.exports = {
     registrationSchema,
+    userUpdateSchema,
     loginSchema,
     emailSchema,
     goalSchema,
