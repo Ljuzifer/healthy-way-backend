@@ -2,10 +2,18 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const { HttpError } = require("../helpers/HttpError");
-require("dotenv").config();
 const multer = require("multer");
+require("dotenv").config();
 
-const { authRouter, goalRouter, weightRouter, waterRouter, recommendedRouter, userRouter } = require("../routes");
+const {
+    authRouter,
+    goalRouter,
+    weightRouter,
+    waterRouter,
+    recommendedRouter,
+    userRouter,
+    foodRouter,
+} = require("../routes");
 
 const app = express();
 
@@ -21,6 +29,7 @@ app.use("/api/user", userRouter);
 app.use("/api/user/goal", goalRouter);
 app.use("/api/user/weight", weightRouter);
 app.use("/api/user/water", waterRouter);
+app.use("/api/user/food", foodRouter);
 app.use("/api/user/recommended-food", recommendedRouter);
 
 app.use((req, res) => {

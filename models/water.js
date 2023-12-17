@@ -1,8 +1,14 @@
 const { Schema, model } = require("mongoose");
 const { MongooseError } = require("../helpers");
+const LocaleDate = require("../helpers/LocaleDate");
 
 const waterSchema = new Schema(
     {
+        date: {
+            type: String,
+            require: true,
+            default: () => LocaleDate(),
+        },
         water: {
             type: Number,
             // default: 0,

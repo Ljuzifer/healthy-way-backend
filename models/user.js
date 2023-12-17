@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 const { MongooseError, IdentifyBMR, NeededWater } = require("../helpers");
 const gravatar = require("gravatar");
+const LocaleDate = require("../helpers/LocaleDate");
 
 const userSchema = new Schema(
     {
@@ -59,32 +60,31 @@ const userSchema = new Schema(
         },
         BMR: {
             type: Number,
-            required: true,
         },
         fat: {
             type: Number,
-            required: true,
         },
         protein: {
             type: Number,
-            required: true,
         },
         carbohydrate: {
             type: Number,
-            required: true,
         },
         baseWater: {
             type: Number,
-            required: true,
         },
         verify: {
             type: Boolean,
             default: false,
-            required: true,
         },
         verificationToken: {
             type: String,
             default: "",
+        },
+        date: {
+            type: String,
+            require: true,
+            default: () => LocaleDate(),
         },
     },
     {

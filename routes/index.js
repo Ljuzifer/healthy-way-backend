@@ -3,6 +3,7 @@ const userRouter = require("./api/user");
 const goalRouter = require("./api/goal");
 const weightRouter = require("./api/weight");
 const waterRouter = require("./api/water");
+const foodRouter = require("./api/food");
 const recommendedRouter = require("./api/recommended");
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
     goalRouter,
     weightRouter,
     waterRouter,
+    foodRouter,
     recommendedRouter,
 };

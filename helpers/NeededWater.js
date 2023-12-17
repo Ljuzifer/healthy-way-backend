@@ -23,7 +23,7 @@ const NeededWater = (weight, activity) => {
 
     const needed = weight * 0.03 + multiplier;
 
-    return needed;
+    return needed.toFixed(1);
 };
 
 module.exports = NeededWater;
