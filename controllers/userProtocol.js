@@ -32,8 +32,6 @@ const updateCurrentUser = async (req, res) => {
     const { _id: owner } = req.user;
     const { body } = req;
 
-    console.log(body);
-
     const answer = await User.findByIdAndUpdate(owner, { ...body }, { new: true });
 
     if (!answer) {
