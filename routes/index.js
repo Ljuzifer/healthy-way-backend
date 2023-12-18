@@ -5,6 +5,7 @@ const weightRouter = require("./api/weight");
 const waterRouter = require("./api/water");
 const foodRouter = require("./api/food");
 const recommendedRouter = require("./api/recommended");
+const statsRouter = require("./api/statistics");
 
 module.exports = {
     authRouter,
@@ -14,4 +15,5 @@ module.exports = {
     waterRouter,
     foodRouter,
     recommendedRouter,
+    statsRouter,
 };

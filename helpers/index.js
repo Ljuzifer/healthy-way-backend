@@ -4,6 +4,7 @@ const MongooseError = require("./MongooseError");
 const IdentifyBMR = require("./IdentifyBMR");
 const NeededWater = require("./NeededWater");
 const EmailSender = require("./EmailSender");
+const LocaleDate = require("./LocaleDate");
 
 module.exports = {
     MethodWrapper,
@@ -12,4 +13,5 @@ module.exports = {
     IdentifyBMR,
     NeededWater,
     EmailSender,
+    LocaleDate,
 };

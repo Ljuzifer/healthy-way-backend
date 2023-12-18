@@ -46,6 +46,7 @@ const updateCurrentUser = async (req, res) => {
             age: answer.age,
             gender: answer.gender,
             height: answer.height,
+            weight: answer.weight,
             activityRatio: answer.activityRatio,
         },
         message: "Updated successfull!",

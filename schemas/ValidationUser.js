@@ -19,11 +19,12 @@ const registrationSchema = Joi.object({
 });
 
 const userUpdateSchema = Joi.object({
-    name: Joi.string().min(2).required(),
-    gender: Joi.string().valid("Male", "Female").required(),
-    age: Joi.number().integer().required(),
-    height: Joi.number().min(140).max(240).required(),
-    activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9).required(),
+    name: Joi.string().min(2),
+    gender: Joi.string().valid("Male", "Female"),
+    age: Joi.number().integer(),
+    height: Joi.number().min(140).max(240),
+    weight: Joi.number().integer(),
+    activityRatio: Joi.number().valid(1.2, 1.375, 1.55, 1.725, 1.9),
 });
 
 const loginSchema = Joi.object({

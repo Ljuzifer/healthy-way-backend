@@ -13,6 +13,7 @@ const {
     recommendedRouter,
     userRouter,
     foodRouter,
+    statsRouter,
 } = require("../routes");
 
 const app = express();
@@ -31,6 +32,7 @@ app.use("/api/user/weight", weightRouter);
 app.use("/api/user/water", waterRouter);
 app.use("/api/user/food", foodRouter);
 app.use("/api/user/recommended-food", recommendedRouter);
+app.use("/api/user/statistics", statsRouter);
 
 app.use((req, res) => {
     res.status(404).json({ message: "Not found" });
