@@ -10,4 +10,6 @@ router.post("/", parseJSON, authentification, JoiValidate(createDiarySchema), mo
 
 router.put("/:foodId", parseJSON, authentification, JoiValidate(updateDiarySchema), mode.updateFoodDiary);
 
+router.delete("/:foodId", authentification, mode.deleteFoodDiary);
+
 module.exports = router;
