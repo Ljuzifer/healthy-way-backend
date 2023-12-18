@@ -1,8 +1,3 @@
-// const { Water } = require("../models/water");
-// const { Food } = require("../models/food");
-// const { Weight } = require("../models/weight");
-// const { HttpError, MethodWrapper } = require("../helpers");
-
 const { HttpError, MethodWrapper } = require("../helpers");
 const { LocaleDate } = require("../helpers");
 const { Water, Weight, Food } = require("../models");
@@ -10,8 +5,8 @@ const { Water, Weight, Food } = require("../models");
 async function getStatistics(req, res, next) {
     const { _id: owner } = req.user;
     const { period, month, quantity } = req.query;
+
     const currentDate = new Date(Date.now());
-    // const currentDate = LocaleDate();
 
     if (period === "today") {
         const beginDate = new Date(currentDate);
