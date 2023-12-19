@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
 const { HttpError, MethodWrapper, EmailSender } = require("../helpers");
+const { error } = require("node:console");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
 
@@ -138,7 +139,7 @@ async function refresh(req, res, next) {
         const isExist = await User.findOne({ refreshToken: token });
 
         if (!isExist) {
-            next(HttpError(403));
+            throw HttpError(403);
         }
 
         const payload = {
@@ -149,10 +150,8 @@ async function refresh(req, res, next) {
         const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
 
         res.json({ accessToken, refreshToken });
-
-        next();
     } catch {
-        next(HttpError(403));
+        throw HttpError(403, error.message);
     }
 }
 

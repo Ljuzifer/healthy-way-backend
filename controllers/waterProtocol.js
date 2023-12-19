@@ -3,17 +3,10 @@ const LocaleDate = require("../helpers/LocaleDate");
 const { Water } = require("../models");
 
 const currentDate = LocaleDate();
-// const currentDate = Date.now();
-// const startTime = new Date(currentDate);
-// const endTime = new Date(currentDate);
-
-// startTime.setHours(0, 0, 0, 0);
-// endTime.setHours(23, 59, 59, 999);
 
 const getWaterToday = async (req, res) => {
     const { _id: owner } = req.user;
 
-    // const waterLevel = await Water.findOne({ owner, createdAt: { $gte: startTime, $lte: endTime } }).exec();
     const waterLevel = await Water.findOne({ owner, date: currentDate }).exec();
 
     if (!waterLevel) {
@@ -27,7 +20,6 @@ const updateWater = async (req, res, next) => {
     const { _id: owner } = req.user;
     const { water } = req.body;
 
-    // const isWaterToday = await Water.findOne({ owner, createdAt: { $gte: startTime, $lte: endTime } }).exec();
     const isWaterToday = await Water.findOne({ owner, date: currentDate }).exec();
 
     if (!isWaterToday) {

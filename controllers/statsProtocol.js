@@ -19,8 +19,6 @@ async function getStatistics(req, res, next) {
 
         const water = await Water.find({ owner, date: today }, "-_id -owner -updatedAt").exec();
         const weight = await Weight.find({ owner, date: today }, "-_id -owner -updatedAt").exec();
-        // const food = await Food.find({ owner, date: today }, "-owner -createdAt -updatedAt").exec();
-
         const todayDiary = await Food.aggregate([
             {
                 $match: { owner, date: today, diary: { $in: ["Breakfast", "Dinner", "Lunch", "Snack"] } },
