@@ -6,6 +6,8 @@ const { createDiarySchema, updateDiarySchema } = require("../../schemas/Validati
 const router = Router();
 const parseJSON = json();
 
+router.get("/", authentification, mode.getFoodDiaryToday);
+
 router.post("/", parseJSON, authentification, JoiValidate(createDiarySchema), mode.createFoodDiary);
 
 router.put("/:foodId", parseJSON, authentification, JoiValidate(updateDiarySchema), mode.updateFoodDiary);

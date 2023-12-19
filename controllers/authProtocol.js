@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
 const { HttpError, MethodWrapper, EmailSender } = require("../helpers");
 
-const { JWT_SECRET_KEY } = process.env;
+const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
 
 // SignUp //
 const registration = async (req, res) => {
@@ -43,14 +43,6 @@ const registration = async (req, res) => {
         user: {
             name: answer.name,
             email: answer.email,
-            // goal: answer.goal,
-            // gender: answer.gender,
-            // age: answer.age,
-            // height: answer.height,
-            // weight: answer.weight,
-            // activityRatio: answer.activityRatio,
-            // avatarURL: answer.avatarURL,
-            // BMR: answer.BMR,
         },
     });
 };
@@ -118,28 +110,50 @@ async function login(req, res) {
         id: user._id,
         name: user.name,
     };
-    const token = jwt.sign(payload, JWT_SECRET_KEY, { expiresIn: "5w" });
-    await User.findByIdAndUpdate(user._id, { token });
+    const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
+    const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
+    await User.findByIdAndUpdate(user._id, { accessToken, refreshToken });
 
     res.json({
-        token,
+        accessToken,
+        refreshToken,
         user: { name: user.name, email: user.email },
     });
 }
 
 async function logout(req, res) {
     const { _id } = req.user;
-    await User.findByIdAndUpdate(_id, { token: null });
+    await User.findByIdAndUpdate(_id, { accessToken: "", refreshToken: "" });
 
     res.status(204).json({
         message: "Logout successfull",
     });
 }
 
-async function current(req, res) {
-    const { email, subscription } = req.user;
+async function refresh(req, res, next) {
+    const { refreshToken: token } = req.body;
 
-    res.json({ email, subscription });
+    try {
+        const { id } = jwt.verify(token, JWT_REFRESH_KEY);
+        const isExist = await User.findOne({ refreshToken: token });
+
+        if (!isExist) {
+            next(HttpError(403));
+        }
+
+        const payload = {
+            id,
+            name: isExist.name,
+        };
+        const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
+        const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
+
+        res.json({ accessToken, refreshToken });
+
+        next();
+    } catch {
+        next(HttpError(403));
+    }
 }
 
 const removeUser = async (req, res) => {
@@ -169,6 +183,6 @@ module.exports = {
     resendConfirmEmail: MethodWrapper(resendConfirmEmail),
     login: MethodWrapper(login),
     logout: MethodWrapper(logout),
-    current: MethodWrapper(current),
+    refresh: MethodWrapper(refresh),
     removeUser: MethodWrapper(removeUser),
 };

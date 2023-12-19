@@ -20,10 +20,7 @@ const userSchema = new Schema(
             minLength: [6, "Password must be minimum of six symbols"],
             required: [true, "Password is required"],
         },
-        token: {
-            type: String,
-            default: null,
-        },
+
         avatarURL: {
             type: String,
             required: true,
@@ -78,6 +75,14 @@ const userSchema = new Schema(
             default: false,
         },
         verificationToken: {
+            type: String,
+            default: "",
+        },
+        accessToken: {
+            type: String,
+            default: "",
+        },
+        refreshToken: {
             type: String,
             default: "",
         },

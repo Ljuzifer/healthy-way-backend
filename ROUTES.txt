@@ -1,0 +1,8 @@
+-------------------------------------------------
+## BASE_URL: https://healthy-way-app.onrender.com
+-------------------------------------------------
+
+AUTH:
+
+/api/auth/registration - реєстрація 
+req.body: {}

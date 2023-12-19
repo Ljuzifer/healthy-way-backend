@@ -1,8 +1,7 @@
 const { Router, json } = require("express");
 const { JoiValidate, authentification } = require("../../middlewares");
-const { registrationSchema, emailSchema, loginSchema } = require("../../schemas/ValidationUser");
+const { registrationSchema, emailSchema, loginSchema, refreshSchema } = require("../../schemas/ValidationUser");
 const mode = require("../../controllers/authProtocol");
-// const authentification = require("../../middlewares/authentification");
 
 const router = Router();
 const parseJSON = json();
@@ -17,7 +16,7 @@ router.post("/login", parseJSON, JoiValidate(loginSchema), mode.login);
 
 router.post("/logout", parseJSON, authentification, mode.logout);
 
-router.get("/current", parseJSON, authentification, mode.current);
+router.post("/refresh", parseJSON, JoiValidate(refreshSchema), mode.refresh);
 
 router.delete("/delete", parseJSON, authentification, mode.removeUser);
 

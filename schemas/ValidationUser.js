@@ -32,6 +32,10 @@ const loginSchema = Joi.object({
     password: Joi.string().min(6).max(16).required().messages({ "any.required": "Enter your password please" }),
 });
 
+const refreshSchema = Joi.object({
+    refreshToken: Joi.string().required(),
+});
+
 const emailSchema = Joi.object({
     email: Joi.string().email().required(),
 });
@@ -71,6 +75,7 @@ module.exports = {
     registrationSchema,
     userUpdateSchema,
     loginSchema,
+    refreshSchema,
     emailSchema,
     goalSchema,
     weightSchema,

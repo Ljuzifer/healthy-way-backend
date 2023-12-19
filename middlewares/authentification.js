@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const { HttpError } = require("../helpers");
 
-const { JWT_SECRET_KEY } = process.env;
+const { JWT_ACCESS_KEY } = process.env;
 
 const authentification = async (req, res, next) => {
     const { authorization = "" } = req.headers;
@@ -14,10 +14,10 @@ const authentification = async (req, res, next) => {
     }
 
     try {
-        const { id } = jwt.verify(token, JWT_SECRET_KEY);
+        const { id } = jwt.verify(token, JWT_ACCESS_KEY);
         const isUser = await User.findById(id);
 
-        if (!isUser || !isUser.token || isUser.token !== token) {
+        if (!isUser || !isUser.accessToken || isUser.accessToken !== token) {
             next(HttpError(401));
         }
         req.user = isUser;
