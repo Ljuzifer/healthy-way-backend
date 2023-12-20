@@ -157,7 +157,7 @@ async function refresh(req, res) {
     }
 }
 
-const forgotPassword = async (req, res) => {
+async function forgotPassword(req, res) {
     const { email } = req.body;
 
     const isUser = await User.findOne({ email });
@@ -178,9 +178,37 @@ const forgotPassword = async (req, res) => {
     await ForgotPassSender(email, updNewPassword);
 
     res.status(200).json({ message: "Your mew password was send to your email!" });
-};
+}
 
-const removeUser = async (req, res) => {
+async function changePassword(req, res) {
+    const { email, password, newPassword } = req.body;
+    const { _id: owner } = req.user;
+
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        throw HttpError(401, "Email or password are incorrect");
+    }
+    const userPassword = bcrypt.compareSync(password, user.password);
+    if (!userPassword) {
+        throw HttpError(401, "Email or password are incorrect");
+    }
+
+    const salt = bcrypt.genSaltSync(13);
+    const hashedPassword = bcrypt.hashSync(newPassword, salt);
+
+    const changePass = await User.findByIdAndUpdate(owner, { password: hashedPassword }, { new: true }).exec();
+
+    if (!changePass) {
+        throw HttpError(403, "Password change is failed...");
+    }
+
+    res.status(200).json({
+        message: "You change your password successfull!",
+    });
+}
+
+async function removeUser(req, res) {
     const { email, password } = req.body;
     const { _id } = req.user;
     const user = await User.findOne({ email });
@@ -199,7 +227,7 @@ const removeUser = async (req, res) => {
     }
 
     res.status(204).json({ message: "User credentials removed successfull!" });
-};
+}
 
 module.exports = {
     registration: MethodWrapper(registration),
@@ -209,5 +237,6 @@ module.exports = {
     logout: MethodWrapper(logout),
     refresh: MethodWrapper(refresh),
     forgotPassword: MethodWrapper(forgotPassword),
+    changePassword: MethodWrapper(changePassword),
     removeUser: MethodWrapper(removeUser),
 };

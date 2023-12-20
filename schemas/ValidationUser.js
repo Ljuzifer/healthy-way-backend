@@ -40,6 +40,12 @@ const emailSchema = Joi.object({
     email: Joi.string().email().required(),
 });
 
+const changePassSchema = Joi.object({
+    email: Joi.string().email().required().messages({ "any.required": "Enter your email please" }),
+    password: Joi.string().min(6).max(16).required().messages({ "any.required": "Enter your password please" }),
+    newPassword: Joi.string().min(6).max(16).required().messages({ "any.required": "Enter your new password please" }),
+});
+
 const goalSchema = Joi.object({
     goal: Joi.string()
         .valid("Lose fat", "Maintain", "Gain muscle")
@@ -61,6 +67,7 @@ const createDiarySchema = Joi.object({
     carbohydrate: Joi.number().required().messages({ "any.required": "Enter your carbohydrate please" }),
     protein: Joi.number().required().messages({ "any.required": "Enter your protein please" }),
     fat: Joi.number().required().messages({ "any.required": "Enter your fat please" }),
+    calories: Joi.number().required().messages({ "any.required": "Enter your calories please" }),
 });
 
 const updateDiarySchema = Joi.object({
@@ -69,6 +76,7 @@ const updateDiarySchema = Joi.object({
     carbohydrate: Joi.number(),
     protein: Joi.number(),
     fat: Joi.number(),
+    calories: Joi.number(),
 });
 
 module.exports = {
@@ -77,6 +85,7 @@ module.exports = {
     loginSchema,
     refreshSchema,
     emailSchema,
+    changePassSchema,
     goalSchema,
     weightSchema,
     waterSchema,

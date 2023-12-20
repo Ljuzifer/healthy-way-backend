@@ -2,9 +2,10 @@ const { MethodWrapper, HttpError } = require("../helpers");
 const LocaleDate = require("../helpers/LocaleDate");
 const Food = require("../models/food");
 
+const currentDate = LocaleDate();
+
 const getFoodDiaryToday = async (req, res) => {
     const { _id: owner } = req.user;
-    const currentDate = LocaleDate();
 
     const isFood = await Food.find({ owner }).exec();
 
@@ -18,28 +19,7 @@ const getFoodDiaryToday = async (req, res) => {
         throw HttpError(404, "There are no food in diary today");
     }
 
-    // const diaryData = { breakfast: [], dinner: [], lunch: [], snack: [] };
-
-    // isDiaryToday.forEach((el) => {
-    //     const obj = {
-    //         diary: el.diary,
-    //         name: el.name,
-    //         fat: el.fat,
-    //         protein: el.protein,
-    //         carbohydrate: el.carbohydrate,
-    //     };
-
-    //     switch (el.diary) {
-    //         case "Breakfast":
-    //         case "Dinner":
-    //         case "Lunch":
-    //         case "Snack":
-    //             diaryData[el.diary.toLowerCase()].push(obj);
-    //             break;
-    //     }
-    // });
-
-    const diaryData = [];
+    const diaryData = { breakfast: [], dinner: [], lunch: [], snack: [], calories: 0 };
 
     isDiaryToday.forEach((el) => {
         const obj = {
@@ -48,6 +28,7 @@ const getFoodDiaryToday = async (req, res) => {
             fat: el.fat,
             protein: el.protein,
             carbohydrate: el.carbohydrate,
+            calories: el.calories,
         };
 
         switch (el.diary) {
@@ -55,7 +36,8 @@ const getFoodDiaryToday = async (req, res) => {
             case "Dinner":
             case "Lunch":
             case "Snack":
-                diaryData.push(obj);
+                diaryData[el.diary.toLowerCase()].push(obj);
+                diaryData.calories += el.calories;
                 break;
         }
     });
@@ -66,11 +48,6 @@ const getFoodDiaryToday = async (req, res) => {
 const createFoodDiary = async (req, res) => {
     const { _id: owner } = req.user;
     const body = req.body;
-
-    // const isExist = await Food.findOne({ owner, date: currentDate }).exec();
-    // if (body.diary === isExist.diary) {
-    //     throw HttpError(400, "Diary is already exist");
-    // }
 
     const newDiary = await Food.create({ owner, ...body });
 
@@ -102,9 +79,12 @@ const deleteFoodDiary = async (req, res) => {
     res.status(409).json({ message: "Removed successfull!" });
 };
 
+const getCalorieToday = async (req, res) => {};
+
 module.exports = {
     getFoodDiaryToday: MethodWrapper(getFoodDiaryToday),
     createFoodDiary: MethodWrapper(createFoodDiary),
     updateFoodDiary: MethodWrapper(updateFoodDiary),
     deleteFoodDiary: MethodWrapper(deleteFoodDiary),
+    getCalorieToday: MethodWrapper(getCalorieToday),
 };

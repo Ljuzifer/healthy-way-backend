@@ -33,6 +33,7 @@ async function getStatistics(req, res, next) {
                                 protein: { $sum: "$protein" },
                                 fat: { $sum: "$fat" },
                                 carbohydrate: { $sum: "$carbohydrate" },
+                                calories: { $sum: "$calories" },
                             },
                         },
                     ],
@@ -44,6 +45,7 @@ async function getStatistics(req, res, next) {
                                 protein: { $sum: "$protein" },
                                 fat: { $sum: "$fat" },
                                 carbohydrate: { $sum: "$carbohydrate" },
+                                calories: { $sum: "$calories" },
                             },
                         },
                     ],
@@ -55,6 +57,7 @@ async function getStatistics(req, res, next) {
                                 protein: { $sum: "$protein" },
                                 fat: { $sum: "$fat" },
                                 carbohydrate: { $sum: "$carbohydrate" },
+                                calories: { $sum: "$calories" },
                             },
                         },
                     ],
@@ -66,6 +69,7 @@ async function getStatistics(req, res, next) {
                                 protein: { $sum: "$protein" },
                                 fat: { $sum: "$fat" },
                                 carbohydrate: { $sum: "$carbohydrate" },
+                                calories: { $sum: "$calories" },
                             },
                         },
                     ],
@@ -76,7 +80,6 @@ async function getStatistics(req, res, next) {
         res.json({
             water,
             weight,
-            // food,
             todayDiary,
         });
 
@@ -102,7 +105,7 @@ async function getStatistics(req, res, next) {
                     fat: { $sum: "$fat" },
                     protein: { $sum: "$protein" },
                     carbohydrate: { $sum: "$carbohydrate" },
-                    total: { $sum: "$total" },
+                    calories: { $sum: "$calories" },
                 },
             },
             { $sort: { _id: 1 } },
@@ -121,9 +124,9 @@ async function getStatistics(req, res, next) {
         ]).exec();
 
         res.json({
+            calories: caloriesByDays,
             water: waterByDays,
             weight: weightByDays,
-            calories: caloriesByDays,
         });
 
         return;
@@ -147,7 +150,7 @@ async function getStatistics(req, res, next) {
                     fat: { $sum: "$fat" },
                     protein: { $sum: "$protein" },
                     carbohydrate: { $sum: "$carbohydrate" },
-                    total: { $sum: "$total" },
+                    calories: { $sum: "$calories" },
                 },
             },
             { $sort: { _id: 1 } },
@@ -218,7 +221,7 @@ async function getStatistics(req, res, next) {
                     fat: { $sum: "$fat" },
                     protein: { $sum: "$protein" },
                     carbohydrate: { $sum: "$carbohydrate" },
-                    total: { $sum: "$total" },
+                    calories: { $sum: "$calories" },
                 },
             },
             { $sort: { _id: 1 } },

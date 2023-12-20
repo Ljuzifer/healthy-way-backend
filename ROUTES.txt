@@ -27,6 +27,31 @@ req.body: {
 POST  ####/api/auth/logaut - логаут
 headers.authorization: Bearer accessToken
 
+POST  ####/api/auth/refresh - оновити токени
+req.body: {
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODIzY2NhYWUwNjhiMTQwMTZkNTI2MyIsIm5hbWUiOiJManV6aWZlciIsImlhdCI6MTcwMzAzNDE0MywiZXhwIjoxNzA0MTU3MzQzfQ.One4kXthbjqcQpOC5VlZuYxXU9tU7_-WFEqSwCTwd8o" //приклад//
+}
+
+POST  ####/api/auth/forgot-password - відновлення паролю
+req.body: {
+    "email": "Ljuzifer@gmail.com"
+}
+
+PUT  ####/api/auth/change-password - зміна паролю
+headers.authorization: Bearer accessToken
+req.body: {
+    "email": "Ljuzifer@gmail.com",
+    "password": "123456",
+    "newPassword": "654321"
+}
+
+DELETE  ####/api/auth/delete - видалення юзера
+headers.authorization: Bearer accessToken
+req.body: {
+    "email": "Ljuzifer@gmail.com",
+    "password": "123456"
+}
+
 USER:
 ************************************************
 

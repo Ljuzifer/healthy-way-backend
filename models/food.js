@@ -104,12 +104,10 @@ const foodSchema = new Schema(
             default: 0,
             required: [true, "Fat is required"],
         },
-        total: {
+        calories: {
             type: Number,
-            default: function () {
-                return this.fat + this.protein + this.carbohydrate;
-            },
-            required: true,
+            default: 0,
+            required: [true, "Calories is required"],
         },
         owner: {
             type: Schema.Types.ObjectId,
