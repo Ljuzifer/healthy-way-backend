@@ -25,6 +25,19 @@ const mailerConfig = {
 
 const transport = nodemailer.createTransport(mailerConfig);
 
+async function ForgotPassSender(mail, password) {
+    const email = {
+        to: mail,
+        from: HOT_MAIL,
+        subject: "Your new password",
+        html: `<b>It's your new password for the "Healthy Way App": ${password}</b>`,
+    };
+
+    await transport.sendMail(email);
+
+    return true;
+}
+
 async function EmailSender(mail, name, code) {
     const email = {
         to: mail,
@@ -98,4 +111,4 @@ async function EmailSender(mail, name, code) {
     return true;
 }
 
-module.exports = EmailSender;
+module.exports = { EmailSender, ForgotPassSender };

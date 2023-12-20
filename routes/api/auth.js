@@ -18,6 +18,8 @@ router.post("/logout", parseJSON, authentification, mode.logout);
 
 router.post("/refresh", parseJSON, JoiValidate(refreshSchema), mode.refresh);
 
+router.post("/forgot-password", parseJSON, JoiValidate(emailSchema), mode.forgotPassword);
+
 router.delete("/delete", parseJSON, authentification, mode.removeUser);
 
 module.exports = router;

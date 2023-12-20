@@ -3,7 +3,7 @@ const HttpError = require("./HttpError");
 const MongooseError = require("./MongooseError");
 const IdentifyBMR = require("./IdentifyBMR");
 const NeededWater = require("./NeededWater");
-const EmailSender = require("./EmailSender");
+const { EmailSender, ForgotPassSender } = require("./EmailSender");
 const LocaleDate = require("./LocaleDate");
 
 module.exports = {
@@ -13,5 +13,6 @@ module.exports = {
     IdentifyBMR,
     NeededWater,
     EmailSender,
+    ForgotPassSender,
     LocaleDate,
 };

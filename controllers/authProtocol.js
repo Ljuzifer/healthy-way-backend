@@ -2,8 +2,7 @@ const { User, Weight, Water } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
-const { HttpError, MethodWrapper, EmailSender } = require("../helpers");
-const { error } = require("node:console");
+const { HttpError, MethodWrapper, EmailSender, ForgotPassSender } = require("../helpers");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
 
@@ -131,7 +130,7 @@ async function logout(req, res) {
     });
 }
 
-async function refresh(req, res, next) {
+async function refresh(req, res) {
     const { refreshToken: token } = req.body;
 
     try {
@@ -139,7 +138,7 @@ async function refresh(req, res, next) {
         const isExist = await User.findOne({ refreshToken: token });
 
         if (!isExist) {
-            throw HttpError(403);
+            throw HttpError(403, "Invalid token");
         }
 
         const payload = {
@@ -149,11 +148,36 @@ async function refresh(req, res, next) {
         const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
         const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
 
+        await User.findByIdAndUpdate(id, { accessToken, refreshToken });
+
         res.json({ accessToken, refreshToken });
-    } catch {
+    } catch (error) {
         throw HttpError(403, error.message);
     }
 }
+
+const forgotPassword = async (req, res) => {
+    const { email } = req.body;
+
+    const isUser = await User.findOne({ email });
+    if (!isUser) {
+        throw HttpError(404, "User not found...");
+    }
+    const { _id: owner } = isUser;
+
+    const FORGOT_PASS = crypto.randomUUID();
+    const salt = bcrypt.genSaltSync(8);
+    const newPassword = bcrypt.hashSync(FORGOT_PASS, salt);
+
+    const passLength = 13;
+    const updNewPassword = newPassword.slice(0, passLength);
+
+    await User.findByIdAndUpdate(owner, { password: updNewPassword }, { new: true }).exec();
+
+    await ForgotPassSender(email, updNewPassword);
+
+    res.status(200).json({ message: "Your mew password was send to your email!" });
+};
 
 const removeUser = async (req, res) => {
     const { email, password } = req.body;
@@ -183,5 +207,6 @@ module.exports = {
     login: MethodWrapper(login),
     logout: MethodWrapper(logout),
     refresh: MethodWrapper(refresh),
+    forgotPassword: MethodWrapper(forgotPassword),
     removeUser: MethodWrapper(removeUser),
 };
