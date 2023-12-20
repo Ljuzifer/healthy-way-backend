@@ -8,6 +8,7 @@ const authentification = async (req, res, next) => {
     const { authorization = "" } = req.headers;
     const tokenArr = authorization.split(" ");
     const [bearer, token] = tokenArr;
+    console.log(token);
 
     if (bearer !== "Bearer") {
         next(HttpError(401));

@@ -57,9 +57,9 @@ async function EmailSender(mail, name, code) {
     <title>Healthy Way App • Email Confirmation</title>
   </head>
   <body style="background-color: #0f0f0f; color: #ffffff; font-family: Roboto">
-    <div style="border: 1px solid #ffffff; width: 100%; background-color: black;">
-      <div style="padding: 30px; text-align: center">
-        <p style="font-weight: 400; font-size: 16px; line-height: 1.5">
+    <div style="border: 1px solid #ffffff; width: 100%; background-color: black">
+      <div style="padding: 30px; text-align: center; color: white">
+        <p style="font-weight: 400; font-size: 16px; line-height: 1.5; color: white">
           Hi, ${name}!
           <hr />
           Thanks for registering the Healthy Way App!

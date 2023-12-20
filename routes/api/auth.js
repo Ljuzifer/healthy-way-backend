@@ -14,7 +14,7 @@ router.post("/verify", parseJSON, JoiValidate(emailSchema), mode.resendConfirmEm
 
 router.post("/login", parseJSON, JoiValidate(loginSchema), mode.login);
 
-router.post("/logout", parseJSON, authentification, mode.logout);
+router.post("/logout", authentification, mode.logout);
 
 router.post("/refresh", parseJSON, JoiValidate(refreshSchema), mode.refresh);
 

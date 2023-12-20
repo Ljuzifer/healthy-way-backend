@@ -123,7 +123,8 @@ async function login(req, res) {
 
 async function logout(req, res) {
     const { _id } = req.user;
-    await User.findByIdAndUpdate(_id, { accessToken: "", refreshToken: "" });
+
+    await User.findByIdAndUpdate(_id, { accessToken: "", refreshToken: "" }, { new: true }).exec();
 
     res.status(204).json({
         message: "Logout successfull",
