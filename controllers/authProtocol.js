@@ -110,7 +110,7 @@ async function login(req, res) {
         id: user._id,
         name: user.name,
     };
-    const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
+    const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13d" });
     const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
     await User.findByIdAndUpdate(user._id, { accessToken, refreshToken });
 
@@ -145,7 +145,7 @@ async function refresh(req, res) {
             id,
             name: isExist.name,
         };
-        const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
+        const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13d" });
         const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
 
         await User.findByIdAndUpdate(id, { accessToken, refreshToken });
