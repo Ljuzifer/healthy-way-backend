@@ -9,7 +9,7 @@ POST  ####/api/auth/registration - реєстрація
 req.body: {
     "name": "Ljuzifer",
     "email": "Ljuzifer@gmail.com",
-    "password": "1q2w3e4r",
+    "password": "123456",
     "goal": "Gain muscle",
     "gender": "Male",
     "age": 37,
