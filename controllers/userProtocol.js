@@ -61,25 +61,12 @@ async function uploadAvatar(req, res) {
     }
 
     const { _id } = req.user;
-    // const { originalname } = req.file;
-    // const filename = `${_id}_${originalname}`;
-
-    // const ava = await Jimp.read(tempUpload);
-    // ava.resize(250, 250).quality(60).write(path.join(tempUpload));
-
-    // const resUpload = path.join(avatarPath, filename);
-
-    // await fs.rename(tempUpload, resUpload);
-    // const sourceFile = path.join(req.file.path, filename);
-    // sharp(sourceFile).resize(200, 200, "contain");
 
     const avatarURL = await uploadCloud(req.file.path);
     if (!avatarURL) {
         throw HttpError(500, `Error uploading avatar to File Server, ${avatarURL}`);
     }
-    // await fs.unlink(sourceFile);
 
-    // const avatarURL = uploadedFile.public_id;
     console.log(avatarURL);
     await User.findByIdAndUpdate(_id, { avatarURL }, { new: true }).exec();
 

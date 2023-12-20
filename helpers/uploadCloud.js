@@ -1,4 +1,3 @@
-// Require the cloudinary library
 const cloudinary = require("cloudinary").v2;
 require("dotenv").config();
 
@@ -13,18 +12,22 @@ cloudinary.config({
 });
 
 const uploadCloud = async (imagePath) => {
-    // Use the uploaded file's name as the asset's public ID and
-    // allow overwriting the asset with new versions
     const options = {
         folder: "healthy-way-app/avatars",
         use_filename: true,
         unique_filename: false,
         overwrite: true,
+        width: 240,
+        height: 240,
+        crop: "fill",
+        radius: "max",
+        format: "png",
     };
 
     try {
         const result = await cloudinary.uploader.upload(imagePath, options);
-        return result.url;
+
+        return result.secure_url;
     } catch (error) {
         console.error(error);
     }
