@@ -1,5 +1,5 @@
 const { MethodWrapper, HttpError } = require("../helpers");
-// const path = require("node:path");
+const fs = require("node:fs/promises");
 const { User } = require("../models");
 const uploadCloud = require("../helpers/uploadCloud");
 
@@ -67,7 +67,8 @@ async function uploadAvatar(req, res) {
         throw HttpError(500, `Error uploading avatar to File Server, ${avatarURL}`);
     }
 
-    console.log(avatarURL);
+    await fs.unlink(req.file.path);
+
     await User.findByIdAndUpdate(_id, { avatarURL }, { new: true }).exec();
 
     res.json({ avatarURL });
