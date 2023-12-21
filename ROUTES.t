@@ -19,6 +19,12 @@ req.body:
     "activityRatio": 1.55
 }
 
+POST  ####/api/auth/verify - підтвердження пошти якщо лист не прийшов
+req.body:
+{
+    "email": "email@email.com" - пошта з якою реєструвались
+}
+
 POST  ####/api/auth/login - логін
 req.body: 
 {

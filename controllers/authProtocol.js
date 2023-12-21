@@ -65,7 +65,6 @@ async function confirmEmail(req, res) {
 }
 
 async function resendConfirmEmail(req, res) {
-    console.log(req.body);
     const { email } = req.body;
     const user = await User.findOne({ email });
 
