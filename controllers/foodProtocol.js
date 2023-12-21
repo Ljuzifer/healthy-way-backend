@@ -25,6 +25,7 @@ const getFoodDiaryToday = async (req, res) => {
         const obj = {
             diary: el.diary,
             name: el.name,
+            id: el._id,
             fat: el.fat,
             protein: el.protein,
             carbohydrate: el.carbohydrate,
