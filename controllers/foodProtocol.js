@@ -19,7 +19,16 @@ const getFoodDiaryToday = async (req, res) => {
         throw HttpError(404, "There are no food in diary today");
     }
 
-    const diaryData = { breakfast: [], dinner: [], lunch: [], snack: [], calories: 0 };
+    const diaryData = {
+        breakfast: [],
+        dinner: [],
+        lunch: [],
+        snack: [],
+        calories: 0,
+        protein: 0,
+        fat: 0,
+        carbohydrate: 0,
+    };
 
     isDiaryToday.forEach((el) => {
         const obj = {
@@ -38,6 +47,9 @@ const getFoodDiaryToday = async (req, res) => {
             case "Lunch":
             case "Snack":
                 diaryData[el.diary.toLowerCase()].push(obj);
+                diaryData.protein += el.protein;
+                diaryData.fat += el.fat;
+                diaryData.carbohydrate += el.carbohydrate;
                 diaryData.calories += el.calories;
                 break;
         }

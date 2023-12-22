@@ -49,7 +49,7 @@ async function ForgotPassSender(mail, password, name) {
         <p style="font-weight: 400; font-size: 16px; line-height: 1.5; color: white">
           Hi, ${name}!
           <hr />
-          There are you new password for the Healthy Way App!
+          There are your new password for the Healthy Way App!
           <br />
 
           Please use it for the enter "Healthy Way App": <b>${password}</b>
@@ -73,7 +73,7 @@ async function ForgotPassSender(mail, password, name) {
             transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
             "
           target="_blank"
-          href="#"
+          href="https://tasitaforme.github.io/healthy-way/signin"
           >Healthy Way App</a
         >
         <br />
