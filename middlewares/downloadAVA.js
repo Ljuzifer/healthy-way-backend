@@ -8,11 +8,7 @@ const multerConfig = multer.diskStorage({
     filename: (req, file, cb) => {
         const { _id } = req.user;
         const filename = `${_id}`;
-        // const userID = req.user._id;
-        // const originalFileName = file.originalname;
-        // const fileExt = path.parse(originalFileName).ext;
 
-        // const destFileName = `${userID}${fileExt}`;
         cb(null, filename);
     },
     limits: {

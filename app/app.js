@@ -3,7 +3,10 @@ const logger = require("morgan");
 const cors = require("cors");
 const { HttpError } = require("../helpers/HttpError");
 const multer = require("multer");
-require("dotenv").config();
+const swaggerUI = require("swagger-ui-express");
+const swaggerFile = require("../swagger.json");
+// require("dotenv").config();
+const parseJSON = express.json();
 
 const {
     authRouter,
@@ -25,6 +28,7 @@ app.use(cors());
 // app.use(express.json());
 // app.use(express.static("public"));
 
+app.use("/api-skeleton", parseJSON, swaggerUI.serve, swaggerUI.setup(swaggerFile));
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/user/goal", goalRouter);
