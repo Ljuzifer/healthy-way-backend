@@ -2,7 +2,7 @@ const { User, Weight, Water } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
-const { HttpError, MethodWrapper, EmailSender, ForgotPassSender } = require("../helpers");
+const { HttpError, MethodWrapper, EmailSender, ForgotPassSender, GenerateRundomPassword } = require("../helpers");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
 
@@ -100,7 +100,8 @@ async function login(req, res) {
         throw HttpError(401, "Sorry, your email is not verified...");
     }
 
-    const userPassword = bcrypt.compareSync(password, user.password);
+    const userPassword = bcrypt.compare(password, user.password);
+    console.log(userPassword, password, user.password);
     if (!userPassword) {
         throw HttpError(401, "Email or password are incorrect");
     }
@@ -163,20 +164,18 @@ async function forgotPassword(req, res) {
     if (!isUser) {
         throw HttpError(404, "User not found...");
     }
-    const { _id: owner } = isUser;
+    const { _id: owner, name } = isUser;
 
-    const FORGOT_PASS = crypto.randomUUID();
-    const salt = bcrypt.genSaltSync(8);
-    const newPassword = bcrypt.hashSync(FORGOT_PASS, salt);
+    const FORGOT_PASS = GenerateRundomPassword(13);
 
-    const passLength = 13;
-    const updNewPassword = newPassword.slice(0, passLength);
+    await User.findByIdAndUpdate(owner, { password: FORGOT_PASS }, { new: true }).exec();
 
-    await User.findByIdAndUpdate(owner, { password: updNewPassword }, { new: true }).exec();
+    await ForgotPassSender(email, FORGOT_PASS, name);
 
-    await ForgotPassSender(email, updNewPassword);
-
-    res.status(200).json({ message: "Your mew password was send to your email!" });
+    res.status(200).json({
+        // body: { newPass: FORGOT_PASS },
+        message: "Your mew password was send to your email!",
+    });
 }
 
 async function changePassword(req, res) {
