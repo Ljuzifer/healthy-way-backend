@@ -57,7 +57,7 @@ const updateCurrentUser = async (req, res) => {
 
 async function uploadAvatar(req, res) {
     console.log(req.file);
-    if (!req.filds) {
+    if (!req.file) {
         throw HttpError(400, "Avatar must be provided");
     }
 

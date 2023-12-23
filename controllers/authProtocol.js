@@ -1,4 +1,4 @@
-const { User, Weight, Water } = require("../models");
+const { User, Weight, Water, Food } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
@@ -175,7 +175,6 @@ async function forgotPassword(req, res) {
     await ForgotPassSender(email, forgotPassword, name);
 
     res.status(200).json({
-        // body: { newPass: FORGOT_PASS },
         message: "Your mew password was send to your email!",
     });
 }
@@ -220,6 +219,10 @@ async function removeUser(req, res) {
     if (!userPassword) {
         throw HttpError(401, "Email or password are incorrect");
     }
+
+    await Weight.deleteMany({ owner: user._id });
+    await Water.deleteMany({ owner: user._id });
+    await Food.deleteMany({ owner: user._id });
 
     const removedUser = await User.findByIdAndRemove(_id);
     if (!removedUser) {
