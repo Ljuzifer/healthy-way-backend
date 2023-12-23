@@ -101,7 +101,6 @@ async function login(req, res) {
     }
 
     const userPassword = bcrypt.compare(password, user.password);
-    console.log(userPassword, password, user.password);
     if (!userPassword) {
         throw HttpError(401, "Email or password are incorrect");
     }
@@ -187,7 +186,7 @@ async function changePassword(req, res) {
     if (!user) {
         throw HttpError(401, "Email or password are incorrect");
     }
-    const userPassword = bcrypt.compareSync(password, user.password);
+    const userPassword = bcrypt.compare(password, user.password);
     if (!userPassword) {
         throw HttpError(401, "Email or password are incorrect");
     }
@@ -202,7 +201,7 @@ async function changePassword(req, res) {
     }
 
     res.status(200).json({
-        message: "You change your password successfull!",
+        message: "You change your password successful!",
     });
 }
 
@@ -224,7 +223,7 @@ async function removeUser(req, res) {
         throw HttpError(404);
     }
 
-    res.status(204).json({ message: "User credentials removed successfull!" });
+    res.status(204).json({ message: "User credentials removed successful!" });
 }
 
 module.exports = {

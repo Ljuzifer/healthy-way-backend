@@ -49,10 +49,11 @@ async function ForgotPassSender(mail, password, name) {
         <p style="font-weight: 400; font-size: 16px; line-height: 1.5; color: white">
           Hi, ${name}!
           <hr />
-          There are your new password for the Healthy Way App!
+          Here is your new password for the Healthy Way App!
           <br />
 
           Please use it for the enter "Healthy Way App": <b>${password}</b>
+          You can change it in your profile.
         </p>
         <br />
         <a
@@ -166,6 +167,7 @@ async function EmailSender(mail, name, code) {
         />
 
         <br />
+        <p>This is automatic letter sender, you don't need to answer for it!</p>
         <br />
       </div>
     </div>
