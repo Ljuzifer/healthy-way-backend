@@ -56,7 +56,6 @@ const updateCurrentUser = async (req, res) => {
 };
 
 async function uploadAvatar(req, res) {
-    console.log(req.file);
     if (!req.file) {
         throw HttpError(400, "Avatar must be provided");
     }
@@ -72,7 +71,7 @@ async function uploadAvatar(req, res) {
 
     await User.findByIdAndUpdate(_id, { avatarURL }, { new: true }).exec();
 
-    res.status(200).json({ avatarURL }, { message: "You update your avatar successfil!" });
+    res.status(200).json({ avatarURL, message: "You update your avatar successful!" });
 }
 
 module.exports = {
