@@ -101,6 +101,7 @@ async function login(req, res) {
     }
 
     const userPassword = await bcrypt.compare(password, user.password);
+    console.log(userPassword);
     if (!userPassword) {
         throw HttpError(401, "Email or password are incorrect");
     }
@@ -165,11 +166,14 @@ async function forgotPassword(req, res) {
     }
     const { _id: owner, name } = isUser;
 
-    const FORGOT_PASS = GenerateRandomPassword(13);
+    const forgotPassword = GenerateRandomPassword(13);
 
-    await User.findByIdAndUpdate(owner, { password: FORGOT_PASS }, { new: true }).exec();
+    const salt = bcrypt.genSaltSync(13);
+    const hashedPassword = bcrypt.hashSync(forgotPassword, salt);
 
-    await ForgotPassSender(email, FORGOT_PASS, name);
+    await User.findByIdAndUpdate(owner, { password: hashedPassword }, { new: true }).exec();
+
+    await ForgotPassSender(email, forgotPassword, name);
 
     res.status(200).json({
         // body: { newPass: FORGOT_PASS },

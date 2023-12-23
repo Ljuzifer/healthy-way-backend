@@ -53,6 +53,7 @@ async function ForgotPassSender(mail, password, name) {
           <br />
 
           Please use it for the enter "Healthy Way App": <b>${password}</b>
+          <br/>
           You can change it in your profile.
         </p>
         <br />
