@@ -5,7 +5,7 @@ const IdentifyBMR = require("./IdentifyBMR");
 const NeededWater = require("./NeededWater");
 const { EmailSender, ForgotPassSender } = require("./EmailSender");
 const LocaleDate = require("./LocaleDate");
-const GenerateRundomPassword = require("./GeneratePass");
+const GenerateRandomPassword = require("./GeneratePass");
 
 module.exports = {
     MethodWrapper,
@@ -16,5 +16,5 @@ module.exports = {
     EmailSender,
     ForgotPassSender,
     LocaleDate,
-    GenerateRundomPassword,
+    GenerateRandomPassword,
 };

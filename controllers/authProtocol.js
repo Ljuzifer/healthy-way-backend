@@ -2,7 +2,7 @@ const { User, Weight, Water } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("node:crypto");
-const { HttpError, MethodWrapper, EmailSender, ForgotPassSender, GenerateRundomPassword } = require("../helpers");
+const { HttpError, MethodWrapper, EmailSender, ForgotPassSender, GenerateRandomPassword } = require("../helpers");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
 
@@ -165,7 +165,7 @@ async function forgotPassword(req, res) {
     }
     const { _id: owner, name } = isUser;
 
-    const FORGOT_PASS = GenerateRundomPassword(13);
+    const FORGOT_PASS = GenerateRandomPassword(13);
 
     await User.findByIdAndUpdate(owner, { password: FORGOT_PASS }, { new: true }).exec();
 
