@@ -1,37 +1,37 @@
 [
-  {
-  "water": 1800,
-  "owner": ObjectId("657cf97604acab43d153e36b"),
-  "date": "01.12.2023",
-  "createdAt": "2023-12-01T20:30:26.303Z",
-  "updatedAt": "2023-12-01T20:49:57.697Z"
-  },
-  {
-  "water": 2800,
-  "owner": ObjectId("657cf97604acab43d153e36b"),
-  "date": "02.12.2023",
-  "createdAt": "2023-12-02T20:30:26.303Z",
-  "updatedAt": "2023-12-02T20:49:57.697Z"
-  },
-  {
-  "water": 2200,
-  "owner": ObjectId("657cf97604acab43d153e36b"),
-  "date": "03.12.2023",
-  "createdAt": "2023-12-03T20:30:26.303Z",
-  "updatedAt": "2023-12-03T20:49:57.697Z"
-  },
-  {
-  "water": 4000,
-  "owner": ObjectId("657cf97604acab43d153e36b"),
-  "date": "04.12.2023",
-  "createdAt": "2023-12-04T20:30:26.303Z",
-  "updatedAt": "2023-12-04T20:49:57.697Z"
-  },
-  {
-  "water": 3500,
-  "owner": ObjectId("657cf97604acab43d153e36b"),
-  "date": "05.12.2023",
-  "createdAt": "2023-12-05T20:30:26.303Z",
-  "updatedAt": "2023-12-05T20:49:57.697Z"
-  }
+    {
+        "water": 1800,
+        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "date": "01.12.2023",
+        "createdAt": { "$date": "2023-12-01T20:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-01T20:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "date": "02.12.2023",
+        "createdAt": { "$date": "2023-12-02T20:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-02T20:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "date": "03.12.2023",
+        "createdAt": { "$date": "2023-12-03T20:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-03T20:49:57.697Z" }
+    },
+    {
+        "water": 4000,
+        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "date": "04.12.2023",
+        "createdAt": { "$date": "2023-12-04T20:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-04T20:49:57.697Z" }
+    },
+    {
+        "water": 3500,
+        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "date": "05.12.2023",
+        "createdAt": { "$date": "2023-12-05T20:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-05T20:49:57.697Z" }
+    }
 ]
