@@ -1259,14 +1259,10 @@
                         }
                     }
                 ],
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ],
+                "security": [{ "Bearer": [] }],
                 "responses": {
                     "200": {
-                        "description": "Successful retrieval",
+                        "description": "Successful getting",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -1284,22 +1280,17 @@
                                             "type": "object",
                                             "properties": {
                                                 "water": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "lastMonth": {
-                                                            "type": "array",
-                                                            "items": {
-                                                                "type": "object",
-                                                                "properties": {
-                                                                    "date": {
-                                                                        "type": "string",
-                                                                        "example": "2023-09-01"
-                                                                    },
-                                                                    "value": {
-                                                                        "type": "number",
-                                                                        "example": 1500
-                                                                    }
-                                                                }
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "_id": {
+                                                                "type": "string",
+                                                                "example": "2023-08"
+                                                            },
+                                                            "total": {
+                                                                "type": "number",
+                                                                "example": 2800
                                                             }
                                                         },
                                                         "lastYear": {

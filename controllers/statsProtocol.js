@@ -93,7 +93,7 @@ async function getStatistics(req, res, next) {
             return res.status(400).json({ message: "Invalid month number" });
         }
 
-        const beginDateMonth = new Date(currentDate.getFullYear(), monthNumber - 1, 1, 3);
+        const beginDateMonth = new Date(currentDate.getFullYear(), monthNumber - 1, 1, 2);
 
         const endDateMonth = new Date(new Date(beginDateMonth).setMonth(new Date(beginDateMonth).getMonth() + 1));
 
@@ -139,14 +139,14 @@ async function getStatistics(req, res, next) {
             return res.status(400).json({ message: "Invalid number of months. Please provide a positive integer." });
         }
 
-        const beginDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - monthsNumber + 1, 1, 3);
+        const beginDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - monthsNumber + 1, 1, 2);
         const endDate = new Date(new Date(beginDate).setMonth(new Date(beginDate).getMonth() + monthsNumber));
 
         const caloriesByDays = await Food.aggregate([
             { $match: { owner, createdAt: { $gte: beginDate, $lt: endDate } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     fat: { $sum: "$fat" },
                     protein: { $sum: "$protein" },
                     carbohydrate: { $sum: "$carbohydrate" },
@@ -160,7 +160,7 @@ async function getStatistics(req, res, next) {
             { $match: { owner, createdAt: { $gte: beginDate, $lt: endDate } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     total: { $sum: "$water" },
                 },
             },
@@ -171,7 +171,7 @@ async function getStatistics(req, res, next) {
             { $match: { owner, createdAt: { $gte: beginDate, $lt: endDate } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     total: { $sum: "$weight" },
                 },
             },
@@ -195,7 +195,7 @@ async function getStatistics(req, res, next) {
             { $match: { owner, createdAt: { $gte: beginDateYear, $lt: endDateYear } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     total: { $sum: "$water" },
                 },
             },
@@ -206,7 +206,7 @@ async function getStatistics(req, res, next) {
             { $match: { owner, createdAt: { $gte: beginDateYear, $lt: endDateYear } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     total: { $sum: "$weight" },
                 },
             },
@@ -217,7 +217,7 @@ async function getStatistics(req, res, next) {
             { $match: { owner, createdAt: { $gte: beginDateYear, $lt: endDateYear } } },
             {
                 $group: {
-                    _id: { $dateToString: { format: "%Y-%m", date: "$createdAt" } },
+                    _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
                     fat: { $sum: "$fat" },
                     protein: { $sum: "$protein" },
                     carbohydrate: { $sum: "$carbohydrate" },
