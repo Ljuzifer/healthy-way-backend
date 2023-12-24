@@ -169,7 +169,7 @@ headers.authorization: Bearer accessToken
 STATISTICS:
 ************************************************************
 
-GET ####/api/user/statistics... - витягти рівень випитої води
+GET ####/api/user/statistics... - статистика за конкретні періоди
 headers.authorization: Bearer accessToken
 req.params:
 ?period=today - за поточний день
