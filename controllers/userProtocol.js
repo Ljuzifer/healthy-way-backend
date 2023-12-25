@@ -28,6 +28,7 @@ const getCurrentUser = async (req, res) => {
             BMR: user.BMR,
             avatarURL: user.avatarURL,
         },
+        message: "You have all your information!",
     });
 };
 

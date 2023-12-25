@@ -3,14 +3,14 @@
     "info": {
         "version": "1.0.0",
         "title": "Health Way App API",
-        "description": "API documentation for Healthy Way App BackEnd",
+        "description": "API documentation for Healthy Way App BACKEND",
         "license": {
             "name": "MIT",
             "url": "https://opensource.org/licenses/MIT"
         }
     },
     "consumes": ["application/json", "multipart/form-data"],
-    "produces": ["application/json", "multipart/form-data"],
+    "produces": ["application/json"],
     "servers": [{ "url": "https://healthy-way-app.onrender.com" }, { "url": "http://localhost:3000" }],
     "tags": [
         {
@@ -429,7 +429,8 @@
                                         "carbohydrate": 592,
                                         "BMR": 4308,
                                         "avatarURL": "https://res.cloudinary.com/dcmbasmpz/image/upload/v1703363919/healthy-way-app/avatars/657cf97604acab43d153e36b.png"
-                                    }
+                                    },
+                                    "message": "You have all your information!"
                                 }
                             }
                         }
@@ -573,10 +574,27 @@
                 }
             }
         },
+        "/api/user/goal": {
+            "put": {
+                "tags": ["User"],
+                "summary": "Update user's goal",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "requestBody": {}
+            }
+        },
 
         "/api/user/food-intake": {
             "post": {
-                "tags": ["User"],
+                "tags": ["Diary"],
                 "summary": "Add food intake for a meal type",
                 "parameters": [
                     {
@@ -700,7 +718,7 @@
                 }
             },
             "get": {
-                "tags": ["User"],
+                "tags": ["Diary"],
                 "summary": "Get user's food intake",
                 "parameters": [
                     {
@@ -859,7 +877,7 @@
         },
         "/api/user/food-intake/{id}": {
             "put": {
-                "tags": ["User"],
+                "tags": ["Diary"],
                 "summary": "Update food intake for a specific product",
                 "parameters": [
                     {
@@ -1404,6 +1422,10 @@
                                 "description": "User's avatar link"
                             }
                         }
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Successful getting current user's info"
                     }
                 }
             },

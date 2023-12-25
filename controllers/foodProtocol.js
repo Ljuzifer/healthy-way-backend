@@ -89,15 +89,12 @@ const deleteFoodDiary = async (req, res) => {
         throw HttpError(404);
     }
 
-    res.status(409).json({ message: "Removed successfull!" });
+    res.status(204).json({ message: "Removed successfull!" });
 };
-
-const getCalorieToday = async (req, res) => {};
 
 module.exports = {
     getFoodDiaryToday: MethodWrapper(getFoodDiaryToday),
     createFoodDiary: MethodWrapper(createFoodDiary),
     updateFoodDiary: MethodWrapper(updateFoodDiary),
     deleteFoodDiary: MethodWrapper(deleteFoodDiary),
-    getCalorieToday: MethodWrapper(getCalorieToday),
 };
