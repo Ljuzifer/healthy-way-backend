@@ -55,7 +55,7 @@ req.body:
     "password": "123456",
     "newPassword": "654321"
 }
-
+====================================================================================================================================
 DELETE  ####/api/auth/delete - видалення юзера
 headers.authorization: Bearer accessToken
 req.body: 
@@ -63,7 +63,7 @@ req.body:
     "email": "Ljuzifer@gmail.com",
     "password": "123456"
 }
-
+=====================================================================================================================================
 USER:
 ************************************************
 
@@ -77,11 +77,12 @@ req.body:
     "name": "Dimon",
     "gender": "Male",
     "age": 37,
+    "weight": 108,
     "height": 188,
     "activityRatio": 1.9
 } - all not required
 
-POST  PUT  ####/api/user/load-avatar - завантажити аватар
+POST  ####/api/user/load-avatar - завантажити аватар
 headers.authorization: Bearer accessToken
 form-data: "avatar" (На cloudinary наразі фото обробляється і переводиться в .png ** якщо будуть проблеми - змінимо)
 

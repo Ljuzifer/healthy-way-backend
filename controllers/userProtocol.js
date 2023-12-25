@@ -12,6 +12,7 @@ const getCurrentUser = async (req, res) => {
 
     res.status(200).json({
         data: {
+            id: user._id,
             name: user.name,
             email: user.email,
             age: user.age,

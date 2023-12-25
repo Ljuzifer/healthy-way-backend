@@ -44,6 +44,7 @@ const registration = async (req, res) => {
             name: answer.name,
             email: answer.email,
         },
+        message: "Verification letter is sent on your email",
     });
 };
 
@@ -61,7 +62,7 @@ async function confirmEmail(req, res) {
         verificationToken: "",
     });
 
-    res.json({ message: "Email was confirm successfull!" });
+    res.status(200).json({ message: "Email was confirm successfull!" });
 }
 
 async function resendConfirmEmail(req, res) {
@@ -83,7 +84,7 @@ async function resendConfirmEmail(req, res) {
 
     await EmailSender(email, user.verificationToken);
 
-    res.json({ message: "Email was confirmed successfull!" });
+    res.status(200).json({ message: "Email was confirmed successfull!" });
 }
 
 // signin //
@@ -113,7 +114,7 @@ async function login(req, res) {
     const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
     await User.findByIdAndUpdate(user._id, { accessToken, refreshToken });
 
-    res.json({
+    res.status(200).json({
         accessToken,
         refreshToken,
         user: { name: user.name, email: user.email },
@@ -208,7 +209,7 @@ async function changePassword(req, res) {
 }
 
 async function removeUser(req, res) {
-    const { email, password } = req.body;
+    const { email, password } = req.body.data;
     const { _id } = req.user;
     const user = await User.findOne({ email });
 
