@@ -218,7 +218,7 @@ async function removeUser(req, res) {
     }
     const userPassword = await bcrypt.compare(password, user.password);
     if (!userPassword) {
-        throw HttpError(401, "Password incorrect!");
+        throw HttpError(404, "Password incorrect!");
     }
 
     const removedUser = await User.findByIdAndRemove(owner);
@@ -230,7 +230,7 @@ async function removeUser(req, res) {
     await Water.deleteMany({ owner: user._id });
     await Food.deleteMany({ owner: user._id });
 
-    res.status(204).json({ message: "User's credentials removed successful!" });
+    res.status(200).json({ message: "User's credentials removed successful!" });
 }
 
 module.exports = {
