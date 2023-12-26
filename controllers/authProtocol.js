@@ -62,7 +62,7 @@ async function confirmEmail(req, res) {
         verificationToken: "",
     });
 
-    res.status(200).json({ message: "Email was confirm successfull!" });
+    res.status(200).json({ message: "Email was confirm successful!" });
 }
 
 async function resendConfirmEmail(req, res) {
@@ -84,7 +84,7 @@ async function resendConfirmEmail(req, res) {
 
     await EmailSender(email, user.verificationToken);
 
-    res.status(200).json({ message: "Email was confirmed successfull!" });
+    res.status(200).json({ message: "Email was confirmed successful!" });
 }
 
 // signin //
