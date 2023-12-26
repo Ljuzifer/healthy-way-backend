@@ -28,6 +28,6 @@ router.post("/forgot-password", parseJSON, JoiValidate(emailSchema), mode.forgot
 
 router.put("/change-password", parseJSON, authentification, JoiValidate(changePassSchema), mode.changePassword);
 
-router.delete("/delete", parseJSON, authentification, mode.removeUser);
+router.delete("/delete/:password", authentification, mode.removeUser);
 
 module.exports = router;

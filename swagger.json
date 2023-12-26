@@ -347,7 +347,15 @@
             "post": {
                 "tags": ["Auth"],
                 "summary": "Getting new accessToken & refreshToken",
-                "parameters": [],
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
                 "requestBody": {
                     "description": "User's refreshToken",
                     "required": true,
@@ -384,6 +392,59 @@
                     },
                     "403": {
                         "description": "Invalid token",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/auth/delete/{password}": {
+            "delete": {
+                "tags": ["Auth"],
+                "summary": "Delete user's account",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "type": "string",
+                        "required": true,
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "responses": {
+                    "204": {
+                        "description": "Successful deleting of user's credentials",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "description": "Successful deleting"
+                                        }
+                                    }
+                                },
+                                "example": {
+                                    "message": "User credentials removed successful!"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized (Password incorrect!)",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found (User not found!)",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error",
                         "content": {}
                     }
                 }

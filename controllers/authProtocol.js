@@ -209,26 +209,26 @@ async function changePassword(req, res) {
 }
 
 async function removeUser(req, res) {
-    const { email, password } = req.body;
-    const { _id } = req.user;
-    const user = await User.findOne({ email });
+    const { password } = req.params;
+    const { _id: owner } = req.user;
+    const user = await User.findById(owner);
 
     if (!user) {
-        throw HttpError(401, "Email or password are incorrect");
+        throw HttpError(404, "User not found!");
     }
     const userPassword = await bcrypt.compare(password, user.password);
     if (!userPassword) {
-        throw HttpError(401, "Email or password are incorrect");
+        throw HttpError(401, "Password incorrect!");
     }
 
-    await Weight.deleteMany({ owner: user._id }).exec();
-    await Water.deleteMany({ owner: user._id }).exec();
-    await Food.deleteMany({ owner: user._id }).exec();
-
-    const removedUser = await User.findByIdAndRemove(_id);
+    const removedUser = await User.findByIdAndRemove(owner);
     if (!removedUser) {
         throw HttpError(404);
     }
+
+    await Weight.deleteMany({ owner: user._id });
+    await Water.deleteMany({ owner: user._id });
+    await Food.deleteMany({ owner: user._id });
 
     res.status(204).json({ message: "User credentials removed successful!" });
 }
