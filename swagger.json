@@ -1330,7 +1330,7 @@
                     "goal": {
                         "type": "string",
                         "description": "User's goal",
-                        "enum": ["Lose Fat", "Gain Muscle", "Maintain"]
+                        "enum": ["Lose fat", "Gain muscle", "Maintain"]
                     },
                     "gender": {
                         "type": "string",
