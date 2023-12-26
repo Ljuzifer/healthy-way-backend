@@ -209,7 +209,7 @@ async function changePassword(req, res) {
 }
 
 async function removeUser(req, res) {
-    const { email, password } = req.body.data;
+    const { email, password } = req.body;
     const { _id } = req.user;
     const user = await User.findOne({ email });
 
@@ -221,9 +221,9 @@ async function removeUser(req, res) {
         throw HttpError(401, "Email or password are incorrect");
     }
 
-    await Weight.deleteMany({ owner: user._id });
-    await Water.deleteMany({ owner: user._id });
-    await Food.deleteMany({ owner: user._id });
+    await Weight.deleteMany({ owner: user._id }).exec();
+    await Water.deleteMany({ owner: user._id }).exec();
+    await Food.deleteMany({ owner: user._id }).exec();
 
     const removedUser = await User.findByIdAndRemove(_id);
     if (!removedUser) {
