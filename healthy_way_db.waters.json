@@ -1,37 +1,219 @@
 [
     {
         "water": 1800,
-        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
         "date": "01.12.2023",
-        "createdAt": { "$date": "2023-12-01T20:30:26.303Z" },
-        "updatedAt": { "$date": "2023-12-01T20:49:57.697Z" }
+        "createdAt": { "$date": "2023-12-01T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-01T15:49:57.697Z" }
     },
     {
         "water": 2800,
-        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
         "date": "02.12.2023",
-        "createdAt": { "$date": "2023-12-02T20:30:26.303Z" },
-        "updatedAt": { "$date": "2023-12-02T20:49:57.697Z" }
+        "createdAt": { "$date": "2023-12-02T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-02T15:49:57.697Z" }
     },
     {
         "water": 2200,
-        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
         "date": "03.12.2023",
-        "createdAt": { "$date": "2023-12-03T20:30:26.303Z" },
-        "updatedAt": { "$date": "2023-12-03T20:49:57.697Z" }
+        "createdAt": { "$date": "2023-12-03T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-03T15:49:57.697Z" }
     },
     {
-        "water": 4000,
-        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "water": 3000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
         "date": "04.12.2023",
-        "createdAt": { "$date": "2023-12-04T20:30:26.303Z" },
-        "updatedAt": { "$date": "2023-12-04T20:49:57.697Z" }
+        "createdAt": { "$date": "2023-12-04T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-04T15:49:57.697Z" }
     },
     {
-        "water": 3500,
-        "owner": { "$oid": "657cf97604acab43d153e36b" },
+        "water": 2500,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
         "date": "05.12.2023",
-        "createdAt": { "$date": "2023-12-05T20:30:26.303Z" },
-        "updatedAt": { "$date": "2023-12-05T20:49:57.697Z" }
+        "createdAt": { "$date": "2023-12-05T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-05T15:49:57.697Z" }
+    },
+    {
+        "water": 1800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "06.12.2023",
+        "createdAt": { "$date": "2023-12-06T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-06T15:49:57.697Z" }
+    },
+    {
+        "water": 1100,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "07.12.2023",
+        "createdAt": { "$date": "2023-12-07T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-07T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "08.12.2023",
+        "createdAt": { "$date": "2023-12-08T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-08T15:49:57.697Z" }
+    },
+    {
+        "water": 3000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "09.12.2023",
+        "createdAt": { "$date": "2023-12-09T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-09T15:49:57.697Z" }
+    },
+    {
+        "water": 1500,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "10.12.2023",
+        "createdAt": { "$date": "2023-12-10T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-10T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "11.12.2023",
+        "createdAt": { "$date": "2023-12-11T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-11T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "12.12.2023",
+        "createdAt": { "$date": "2023-12-12T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-12T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "13.12.2023",
+        "createdAt": { "$date": "2023-12-13T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-13T15:49:57.697Z" }
+    },
+    {
+        "water": 3000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "14.12.2023",
+        "createdAt": { "$date": "2023-12-14T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-14T15:49:57.697Z" }
+    },
+    {
+        "water": 2500,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "15.12.2023",
+        "createdAt": { "$date": "2023-12-15T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-15T15:49:57.697Z" }
+    },
+    {
+        "water": 1800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "16.12.2023",
+        "createdAt": { "$date": "2023-12-16T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-16T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "17.12.2023",
+        "createdAt": { "$date": "2023-12-17T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-17T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "18.12.2023",
+        "createdAt": { "$date": "2023-12-18T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-18T15:49:57.697Z" }
+    },
+    {
+        "water": 2000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "19.12.2023",
+        "createdAt": { "$date": "2023-12-19T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-19T15:49:57.697Z" }
+    },
+    {
+        "water": 1500,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "20.12.2023",
+        "createdAt": { "$date": "2023-12-20T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-20T15:49:57.697Z" }
+    },
+    {
+        "water": 1800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "21.12.2023",
+        "createdAt": { "$date": "2023-12-21T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-21T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "22.12.2023",
+        "createdAt": { "$date": "2023-12-22T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-22T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "23.12.2023",
+        "createdAt": { "$date": "2023-12-23T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-23T15:49:57.697Z" }
+    },
+    {
+        "water": 3000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "24.12.2023",
+        "createdAt": { "$date": "2023-12-24T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-24T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "25.12.2023",
+        "createdAt": { "$date": "2023-12-25T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-25T15:49:57.697Z" }
+    },
+    {
+        "water": 1800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "26.12.2023",
+        "createdAt": { "$date": "2023-12-26T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-26T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "27.12.2023",
+        "createdAt": { "$date": "2023-12-27T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-27T15:49:57.697Z" }
+    },
+    {
+        "water": 2200,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "28.12.2023",
+        "createdAt": { "$date": "2023-12-28T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-28T15:49:57.697Z" }
+    },
+    {
+        "water": 2000,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "29.12.2023",
+        "createdAt": { "$date": "2023-12-29T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-29T15:49:57.697Z" }
+    },
+    {
+        "water": 2500,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "30.12.2023",
+        "createdAt": { "$date": "2023-12-30T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-30T15:49:57.697Z" }
+    },
+    {
+        "water": 2800,
+        "owner": { "$oid": "65849f0ac8d62611a7a7b11e" },
+        "date": "31.12.2023",
+        "createdAt": { "$date": "2023-12-31T15:30:26.303Z" },
+        "updatedAt": { "$date": "2023-12-31T15:49:57.697Z" }
     }
 ]

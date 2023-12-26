@@ -1,0 +1,2358 @@
+[
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 500,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "01.12.2023",
+        "createdAt": {
+            "$date": "2023-12-01T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-01T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 720,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "01.12.2023",
+        "createdAt": {
+            "$date": "2023-12-01T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-01T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "01.12.2023",
+        "createdAt": {
+            "$date": "2023-12-01T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-01T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "01.12.2023",
+        "createdAt": {
+            "$date": "2023-12-01T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-01T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 900,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "02.12.2023",
+        "createdAt": {
+            "$date": "2023-12-02T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-02T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 520,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "02.12.2023",
+        "createdAt": {
+            "$date": "2023-12-02T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-02T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 580,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "02.12.2023",
+        "createdAt": {
+            "$date": "2023-12-02T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-02T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "02.12.2023",
+        "createdAt": {
+            "$date": "2023-12-02T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-02T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "03.12.2023",
+        "createdAt": {
+            "$date": "2023-12-03T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-03T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 520,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "03.12.2023",
+        "createdAt": {
+            "$date": "2023-12-03T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-03T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 680,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "03.12.2023",
+        "createdAt": {
+            "$date": "2023-12-03T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-03T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "03.12.2023",
+        "createdAt": {
+            "$date": "2023-12-03T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-03T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "04.12.2023",
+        "createdAt": {
+            "$date": "2023-12-04T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-04T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 720,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "04.12.2023",
+        "createdAt": {
+            "$date": "2023-12-04T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-04T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "04.12.2023",
+        "createdAt": {
+            "$date": "2023-12-04T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-04T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "04.12.2023",
+        "createdAt": {
+            "$date": "2023-12-04T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-04T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "05.12.2023",
+        "createdAt": {
+            "$date": "2023-12-05T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-05T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "05.12.2023",
+        "createdAt": {
+            "$date": "2023-12-05T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-05T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "05.12.2023",
+        "createdAt": {
+            "$date": "2023-12-05T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-05T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "05.12.2023",
+        "createdAt": {
+            "$date": "2023-12-05T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-05T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "06.12.2023",
+        "createdAt": {
+            "$date": "2023-12-06T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-06T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 620,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "06.12.2023",
+        "createdAt": {
+            "$date": "2023-12-06T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-06T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "06.12.2023",
+        "createdAt": {
+            "$date": "2023-12-06T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-06T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "06.12.2023",
+        "createdAt": {
+            "$date": "2023-12-06T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-06T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "07.12.2023",
+        "createdAt": {
+            "$date": "2023-12-07T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-07T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "07.12.2023",
+        "createdAt": {
+            "$date": "2023-12-07T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-07T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "07.12.2023",
+        "createdAt": {
+            "$date": "2023-12-07T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-07T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "07.12.2023",
+        "createdAt": {
+            "$date": "2023-12-07T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-07T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "08.12.2023",
+        "createdAt": {
+            "$date": "2023-12-08T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-08T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "08.12.2023",
+        "createdAt": {
+            "$date": "2023-12-08T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-08T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "08.12.2023",
+        "createdAt": {
+            "$date": "2023-12-08T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-08T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "08.12.2023",
+        "createdAt": {
+            "$date": "2023-12-08T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-08T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "09.12.2023",
+        "createdAt": {
+            "$date": "2023-12-09T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-09T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "09.12.2023",
+        "createdAt": {
+            "$date": "2023-12-09T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-09T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 580,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "09.12.2023",
+        "createdAt": {
+            "$date": "2023-12-09T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-09T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "09.12.2023",
+        "createdAt": {
+            "$date": "2023-12-09T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-09T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "10.12.2023",
+        "createdAt": {
+            "$date": "2023-12-10T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-10T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 720,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "10.12.2023",
+        "createdAt": {
+            "$date": "2023-12-10T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-10T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "10.12.2023",
+        "createdAt": {
+            "$date": "2023-12-10T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-10T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "10.12.2023",
+        "createdAt": {
+            "$date": "2023-12-10T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-10T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "11.12.2023",
+        "createdAt": {
+            "$date": "2023-12-11T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-11T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "11.12.2023",
+        "createdAt": {
+            "$date": "2023-12-11T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-11T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 880,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "11.12.2023",
+        "createdAt": {
+            "$date": "2023-12-11T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-11T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "11.12.2023",
+        "createdAt": {
+            "$date": "2023-12-11T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-11T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "12.12.2023",
+        "createdAt": {
+            "$date": "2023-12-12T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-12T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "12.12.2023",
+        "createdAt": {
+            "$date": "2023-12-12T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-12T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 680,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "12.12.2023",
+        "createdAt": {
+            "$date": "2023-12-12T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-12T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "12.12.2023",
+        "createdAt": {
+            "$date": "2023-12-12T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-12T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "13.12.2023",
+        "createdAt": {
+            "$date": "2023-12-13T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-13T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 620,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "13.12.2023",
+        "createdAt": {
+            "$date": "2023-12-13T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-13T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "13.12.2023",
+        "createdAt": {
+            "$date": "2023-12-13T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-13T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "13.12.2023",
+        "createdAt": {
+            "$date": "2023-12-13T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-13T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "14.12.2023",
+        "createdAt": {
+            "$date": "2023-12-14T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-14T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 720,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "14.12.2023",
+        "createdAt": {
+            "$date": "2023-12-14T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-14T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "14.12.2023",
+        "createdAt": {
+            "$date": "2023-12-14T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-14T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "14.12.2023",
+        "createdAt": {
+            "$date": "2023-12-14T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-14T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "15.12.2023",
+        "createdAt": {
+            "$date": "2023-12-15T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-15T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "15.12.2023",
+        "createdAt": {
+            "$date": "2023-12-15T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-15T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "15.12.2023",
+        "createdAt": {
+            "$date": "2023-12-15T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-15T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "15.12.2023",
+        "createdAt": {
+            "$date": "2023-12-15T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-15T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "16.12.2023",
+        "createdAt": {
+            "$date": "2023-12-16T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-16T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "16.12.2023",
+        "createdAt": {
+            "$date": "2023-12-16T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-16T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 880,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "16.12.2023",
+        "createdAt": {
+            "$date": "2023-12-16T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-16T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "16.12.2023",
+        "createdAt": {
+            "$date": "2023-12-16T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-16T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "17.12.2023",
+        "createdAt": {
+            "$date": "2023-12-17T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-17T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "17.12.2023",
+        "createdAt": {
+            "$date": "2023-12-17T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-17T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 580,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "17.12.2023",
+        "createdAt": {
+            "$date": "2023-12-17T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-17T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "17.12.2023",
+        "createdAt": {
+            "$date": "2023-12-17T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-17T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 500,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "18.12.2023",
+        "createdAt": {
+            "$date": "2023-12-18T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-18T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 520,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "18.12.2023",
+        "createdAt": {
+            "$date": "2023-12-18T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-18T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "18.12.2023",
+        "createdAt": {
+            "$date": "2023-12-18T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-18T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "18.12.2023",
+        "createdAt": {
+            "$date": "2023-12-18T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-18T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "19.12.2023",
+        "createdAt": {
+            "$date": "2023-12-19T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-19T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "19.12.2023",
+        "createdAt": {
+            "$date": "2023-12-19T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-19T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 680,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "19.12.2023",
+        "createdAt": {
+            "$date": "2023-12-19T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-19T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "19.12.2023",
+        "createdAt": {
+            "$date": "2023-12-19T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-19T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "20.12.2023",
+        "createdAt": {
+            "$date": "2023-12-20T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-20T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "20.12.2023",
+        "createdAt": {
+            "$date": "2023-12-20T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-20T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "20.12.2023",
+        "createdAt": {
+            "$date": "2023-12-20T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-20T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "20.12.2023",
+        "createdAt": {
+            "$date": "2023-12-20T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-20T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "21.12.2023",
+        "createdAt": {
+            "$date": "2023-12-21T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-21T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 620,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "21.12.2023",
+        "createdAt": {
+            "$date": "2023-12-21T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-21T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "21.12.2023",
+        "createdAt": {
+            "$date": "2023-12-21T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-21T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "21.12.2023",
+        "createdAt": {
+            "$date": "2023-12-21T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-21T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "22.12.2023",
+        "createdAt": {
+            "$date": "2023-12-22T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-22T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "22.12.2023",
+        "createdAt": {
+            "$date": "2023-12-22T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-22T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 680,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "22.12.2023",
+        "createdAt": {
+            "$date": "2023-12-22T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-22T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "22.12.2023",
+        "createdAt": {
+            "$date": "2023-12-22T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-22T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "23.12.2023",
+        "createdAt": {
+            "$date": "2023-12-23T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-23T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "23.12.2023",
+        "createdAt": {
+            "$date": "2023-12-23T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-23T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "23.12.2023",
+        "createdAt": {
+            "$date": "2023-12-23T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-23T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "23.12.2023",
+        "createdAt": {
+            "$date": "2023-12-23T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-23T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "24.12.2023",
+        "createdAt": {
+            "$date": "2023-12-24T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-24T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "24.12.2023",
+        "createdAt": {
+            "$date": "2023-12-24T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-24T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "24.12.2023",
+        "createdAt": {
+            "$date": "2023-12-24T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-24T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "24.12.2023",
+        "createdAt": {
+            "$date": "2023-12-24T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-24T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "25.12.2023",
+        "createdAt": {
+            "$date": "2023-12-25T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-25T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "25.12.2023",
+        "createdAt": {
+            "$date": "2023-12-25T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-25T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "25.12.2023",
+        "createdAt": {
+            "$date": "2023-12-25T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-25T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "25.12.2023",
+        "createdAt": {
+            "$date": "2023-12-25T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-25T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "26.12.2023",
+        "createdAt": {
+            "$date": "2023-12-26T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-26T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 620,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "26.12.2023",
+        "createdAt": {
+            "$date": "2023-12-26T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-26T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "26.12.2023",
+        "createdAt": {
+            "$date": "2023-12-26T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-26T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "26.12.2023",
+        "createdAt": {
+            "$date": "2023-12-26T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-26T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "27.12.2023",
+        "createdAt": {
+            "$date": "2023-12-27T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-27T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "27.12.2023",
+        "createdAt": {
+            "$date": "2023-12-27T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-27T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "27.12.2023",
+        "createdAt": {
+            "$date": "2023-12-27T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-27T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "27.12.2023",
+        "createdAt": {
+            "$date": "2023-12-27T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-27T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "28.12.2023",
+        "createdAt": {
+            "$date": "2023-12-28T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-28T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "28.12.2023",
+        "createdAt": {
+            "$date": "2023-12-28T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-28T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 780,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "28.12.2023",
+        "createdAt": {
+            "$date": "2023-12-28T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-28T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "28.12.2023",
+        "createdAt": {
+            "$date": "2023-12-28T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-28T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 700,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "29.12.2023",
+        "createdAt": {
+            "$date": "2023-12-29T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-29T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 620,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "29.12.2023",
+        "createdAt": {
+            "$date": "2023-12-29T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-29T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "29.12.2023",
+        "createdAt": {
+            "$date": "2023-12-29T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-29T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "29.12.2023",
+        "createdAt": {
+            "$date": "2023-12-29T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-29T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 800,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "30.12.2023",
+        "createdAt": {
+            "$date": "2023-12-30T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-30T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "30.12.2023",
+        "createdAt": {
+            "$date": "2023-12-30T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-30T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "30.12.2023",
+        "createdAt": {
+            "$date": "2023-12-30T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-30T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "30.12.2023",
+        "createdAt": {
+            "$date": "2023-12-30T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-30T15:25:24.163Z"
+        }
+    },
+    {
+        "diary": "Breakfast",
+        "name": "ukrainian borshch",
+        "carbohydrate": 50,
+        "protein": 40,
+        "fat": 20,
+        "calories": 600,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 110,
+        "date": "31.12.2023",
+        "createdAt": {
+            "$date": "2023-12-31T18:22:40.011Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-31T18:22:40.011Z"
+        }
+    },
+    {
+        "diary": "Dinner",
+        "name": "Spagetti",
+        "carbohydrate": 30,
+        "protein": 55,
+        "fat": 10,
+        "calories": 920,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 95,
+        "date": "31.12.2023",
+        "createdAt": {
+            "$date": "2023-12-31T15:14:33.375Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-31T15:14:33.375Z"
+        }
+    },
+    {
+        "diary": "Lunch",
+        "name": "Apple pie",
+        "carbohydrate": 80,
+        "protein": 45,
+        "fat": 5,
+        "calories": 980,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 130,
+        "date": "31.12.2023",
+        "createdAt": {
+            "$date": "2023-12-31T15:53:59.376Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-31T15:53:59.376Z"
+        }
+    },
+    {
+        "diary": "Snack",
+        "name": "sandwich",
+        "carbohydrate": 40,
+        "protein": 68,
+        "fat": 13,
+        "calories": 180,
+        "owner": {
+            "$oid": "65849f0ac8d62611a7a7b11e"
+        },
+        "total": 121,
+        "date": "31.12.2023",
+        "createdAt": {
+            "$date": "2023-12-31T15:25:24.163Z"
+        },
+        "updatedAt": {
+            "$date": "2023-12-31T15:25:24.163Z"
+        }
+    }
+]

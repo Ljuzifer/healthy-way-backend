@@ -588,418 +588,588 @@
                     }
                 ],
                 "security": [{ "Bearer": [] }],
-                "requestBody": {}
-            }
-        },
-
-        "/api/user/food-intake": {
-            "post": {
-                "tags": ["Diary"],
-                "summary": "Add food intake for a meal type",
-                "parameters": [
-                    {
-                        "in": "header",
-                        "name": "Authorization",
-                        "description": "Bearer token for authentication",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ],
                 "requestBody": {
-                    "description": "Food intake object",
+                    "description": "User's new goal",
                     "required": true,
                     "content": {
                         "application/json": {
                             "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "description": "Type of meal (e.g., 'breakfast', 'snack', 'dinner', 'lunch')"
-                                    },
-                                    "products": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "object",
-                                            "properties": {
-                                                "name": {
-                                                    "type": "string",
-                                                    "description": "Name of the food product"
-                                                },
-                                                "carbonohidrates": {
-                                                    "type": "number",
-                                                    "description": "Carbohydrate content"
-                                                },
-                                                "protein": {
-                                                    "type": "number",
-                                                    "description": "Protein content"
-                                                },
-                                                "fat": {
-                                                    "type": "number",
-                                                    "description": "Fat content"
-                                                },
-                                                "calories": {
-                                                    "type": "number",
-                                                    "description": "Calories content"
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
+                                "$ref": "#/components/schemas/GoalRequest-Response"
+                            },
+                            "example": {
+                                "goal": "Gain muscle"
                             }
                         }
                     }
                 },
                 "responses": {
                     "201": {
-                        "description": "Successful creation",
+                        "description": "User's changed goal",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "string",
-                                            "example": "success"
-                                        },
-                                        "code": {
-                                            "type": "number",
-                                            "example": 201
-                                        },
-                                        "data": {
-                                            "type": "object",
-                                            "properties": {
-                                                "type": {
-                                                    "type": "string"
-                                                },
-                                                "products": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string"
-                                                            },
-                                                            "carbonohidrates": {
-                                                                "type": "number"
-                                                            },
-                                                            "protein": {
-                                                                "type": "number"
-                                                            },
-                                                            "fat": {
-                                                                "type": "number"
-                                                            },
-                                                            "calories": {
-                                                                "type": "number"
-                                                            },
-                                                            "id": {
-                                                                "type": "string"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                "totalCalories": {
-                                                    "type": "number"
-                                                }
-                                            }
-                                        }
-                                    }
+                                    "$ref": "#/components/schemas/GoalRequest-Response"
+                                },
+                                "example": {
+                                    "goal": "Gain muscle"
                                 }
                             }
-                        }
-                    }
-                }
-            },
-            "get": {
-                "tags": ["Diary"],
-                "summary": "Get user's food intake",
-                "parameters": [
-                    {
-                        "name": "date",
-                        "in": "query",
-                        "description": "Date of food intake",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
                         }
                     },
-                    {
-                        "in": "header",
-                        "name": "Authorization",
-                        "description": "Bearer token for authentication",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful retrieval",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "status": {
-                                            "type": "string",
-                                            "example": "success"
-                                        },
-                                        "code": {
-                                            "type": "number",
-                                            "example": 200
-                                        },
-                                        "data": {
-                                            "type": "object",
-                                            "properties": {
-                                                "breakfast": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string",
-                                                                "example": "english breakfast"
-                                                            },
-                                                            "carbonohidrates": {
-                                                                "type": "number",
-                                                                "example": 22
-                                                            },
-                                                            "protein": {
-                                                                "type": "number",
-                                                                "example": 22
-                                                            },
-                                                            "fat": {
-                                                                "type": "number",
-                                                                "example": 22
-                                                            },
-                                                            "calories": {
-                                                                "type": "number",
-                                                                "example": 59
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                "snack": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string"
-                                                            },
-                                                            "carbonohidrates": {
-                                                                "type": "number"
-                                                            },
-                                                            "protein": {
-                                                                "type": "number"
-                                                            },
-                                                            "fat": {
-                                                                "type": "number"
-                                                            },
-                                                            "calories": {
-                                                                "type": "number"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                "dinner": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string"
-                                                            },
-                                                            "carbonohidrates": {
-                                                                "type": "number"
-                                                            },
-                                                            "protein": {
-                                                                "type": "number"
-                                                            },
-                                                            "fat": {
-                                                                "type": "number"
-                                                            },
-                                                            "calories": {
-                                                                "type": "number"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                "lunch": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string"
-                                                            },
-                                                            "carbonohidrates": {
-                                                                "type": "number"
-                                                            },
-                                                            "protein": {
-                                                                "type": "number"
-                                                            },
-                                                            "fat": {
-                                                                "type": "number"
-                                                            },
-                                                            "calories": {
-                                                                "type": "number"
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                "totalCalories": {
-                                                    "type": "number",
-                                                    "example": 120
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
                     }
                 }
             }
         },
-        "/api/user/food-intake/{id}": {
+        "/api/user/weight": {
             "put": {
-                "tags": ["Diary"],
-                "summary": "Update food intake for a specific product",
+                "tags": ["User"],
+                "summary": "Update user's weight",
                 "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "ID of the food product to update",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
                     {
                         "in": "header",
                         "name": "Authorization",
-                        "description": "Bearer token for authentication",
                         "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
+                        "type": "string",
+                        "description": "Bearer accessToken"
                     }
                 ],
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ],
+                "security": [{ "Bearer": [] }],
                 "requestBody": {
-                    "description": "Food product object",
+                    "description": "Enter new user's weight",
                     "required": true,
                     "content": {
                         "application/json": {
                             "schema": {
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "type": "string",
-                                        "description": "Type of meal (e.g., 'breakfast', 'snack', 'dinner', 'lunch')"
-                                    },
-                                    "product": {
-                                        "type": "object",
-                                        "properties": {
-                                            "name": {
-                                                "type": "string",
-                                                "description": "Name of the food product"
-                                            },
-                                            "carbonohidrates": {
-                                                "type": "number",
-                                                "description": "Carbohydrate content"
-                                            },
-                                            "protein": {
-                                                "type": "number",
-                                                "description": "Protein content"
-                                            },
-                                            "fat": {
-                                                "type": "number",
-                                                "description": "Fat content"
-                                            },
-                                            "calories": {
-                                                "type": "number",
-                                                "description": "Calories content"
-                                            }
-                                        }
-                                    }
-                                }
+                                "$ref": "#/components/schemas/WeightRequest"
+                            },
+                            "example": {
+                                "weight": 108
                             }
                         }
                     }
                 },
                 "responses": {
                     "200": {
-                        "description": "Successful update",
+                        "description": "User's weight updated successful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WeightResponse"
+                                },
+                                "example": {
+                                    "_id": "6589b4b5ae510d48d50a1d00",
+                                    "weight": 108,
+                                    "owner": "657cf97604acab43d153e63b",
+                                    "date": "22.12.2023",
+                                    "createdAt": "2023-12-22T16:58:29.001Z"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error. Failed to update weight.",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/user/water": {
+            "get": {
+                "tags": ["User"],
+                "summary": "Getting user's water level",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "responses": {
+                    "200": {
+                        "description": "Successful getting user's water level",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WaterGetResponse"
+                                },
+                                "example": {
+                                    "_id": "6589cfe9045d5d02bdadf0c6",
+                                    "water": 400,
+                                    "owner": "657cf97604acab43d153e36b",
+                                    "date": "22.12.2023",
+                                    "createdAt": "2023-12-25T18:54:33.687Z",
+                                    "updatedAt": "2023-12-25T18:54:33.687Z"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
-                                        "status": {
+                                        "message": {
                                             "type": "string",
-                                            "example": "success"
-                                        },
-                                        "code": {
-                                            "type": "number",
-                                            "example": 200
-                                        },
-                                        "data": {
-                                            "type": "object",
-                                            "properties": {
-                                                "type": {
-                                                    "type": "string"
-                                                },
-                                                "product": {
-                                                    "type": "object",
-                                                    "properties": {
-                                                        "name": {
-                                                            "type": "string"
-                                                        },
-                                                        "carbonohidrates": {
-                                                            "type": "number"
-                                                        },
-                                                        "protein": {
-                                                            "type": "number"
-                                                        },
-                                                        "fat": {
-                                                            "type": "number"
-                                                        },
-                                                        "calories": {
-                                                            "type": "number"
-                                                        },
-                                                        "id": {
-                                                            "type": "string"
-                                                        }
-                                                    }
-                                                },
-                                                "totalCalories": {
-                                                    "type": "number"
-                                                }
-                                            }
+                                            "description": "It's no water level today"
                                         }
+                                    },
+                                    "example": {
+                                        "message": "You didn't enter water today...:("
                                     }
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Server error. Unable to get water level",
+                        "content": {}
+                    }
+                }
+            },
+            "put": {
+                "tags": ["User"],
+                "summary": "Updating user's water level",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "requestBody": {
+                    "description": "Amount of water drunk",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WaterRequest"
+                            },
+                            "example": {
+                                "water": 200
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Amount of water drunk today",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WaterGetResponse"
+                                },
+                                "example": {
+                                    "_id": "6589cfe9045d5d02bdadf0c6",
+                                    "water": 400,
+                                    "owner": "657cf97604acab43d153e36b",
+                                    "date": "25.12.2023",
+                                    "createdAt": "2023-12-25T18:54:33.687Z",
+                                    "updatedAt": "2023-12-25T20:14:23.739Z"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "Amount of water drunk today if it was 0",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WaterUpdateResponse"
+                                },
+                                "example": {
+                                    "water": 200
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error. Failed to update water level.",
+                        "content": {}
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["User"],
+                "summary": "Reseting user's water level",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "responses": {
+                    "204": {
+                        "description": "Successful reset of water level",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/WaterResetResponse"
+                                },
+                                "example": {
+                                    "owner": "6589cfe9045d5d02bdadf0c6",
+                                    "water": 0
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error. Failed to update water level.",
+                        "content": {}
+                    }
+                }
+            }
+        },
+
+        "/api/user/food": {
+            "post": {
+                "tags": ["Diary"],
+                "summary": "Add food intake in the diary",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "requestBody": {
+                    "description": "Food intake object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FoodCreateRequest"
+                            },
+                            "example": {
+                                "diary": "Lunch",
+                                "name": "pizza",
+                                "carbohydrate": 50,
+                                "protein": 40,
+                                "fat": 20,
+                                "calories": 666
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful creation in the diary",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FoodCreateResponse"
+                                },
+                                "example": {
+                                    "diary": "Lunch",
+                                    "name": "pizza",
+                                    "carbohydrate": 50,
+                                    "protein": 40,
+                                    "fat": 20,
+                                    "calories": 666,
+                                    "owner": "657cf97604acab43d153e36b",
+                                    "_id": "6589eefc045d5d02bdadf353",
+                                    "date": "25.12.2023",
+                                    "createdAt": "2023-12-25T21:07:08.585Z",
+                                    "updatedAt": "2023-12-25T21:07:08.585Z"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "content": {}
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Diary"],
+                "summary": "Get user's food intake today",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "responses": {
+                    "200": {
+                        "description": "Successful getting of food diary today",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FoodGetResponse"
+                                },
+                                "example": {
+                                    "breakfast": [
+                                        {
+                                            "diary": "Breakfast",
+                                            "name": "ukrainian borshch",
+                                            "id": "65899aabbeb52920dd6123ca",
+                                            "fat": 20,
+                                            "protein": 40,
+                                            "carbohydrate": 50,
+                                            "calories": 666
+                                        }
+                                    ],
+                                    "dinner": [
+                                        {
+                                            "diary": "Dinner",
+                                            "name": "pizza",
+                                            "id": "65899b54beb52920dd6123cf",
+                                            "fat": 20,
+                                            "protein": 40,
+                                            "carbohydrate": 50,
+                                            "calories": 666
+                                        }
+                                    ],
+                                    "lunch": [
+                                        {
+                                            "diary": "Lunch",
+                                            "name": "pizza",
+                                            "id": "6589eefc045d5d02bdadf353",
+                                            "fat": 20,
+                                            "protein": 40,
+                                            "carbohydrate": 50,
+                                            "calories": 666
+                                        }
+                                    ],
+                                    "snack": [
+                                        {
+                                            "diary": "Snack",
+                                            "name": "apple pie",
+                                            "id": "6589f103045d5d02bdadf358",
+                                            "fat": 10,
+                                            "protein": 50,
+                                            "carbohydrate": 80,
+                                            "calories": 888
+                                        }
+                                    ],
+                                    "calories": 2886,
+                                    "protein": 170,
+                                    "fat": 70,
+                                    "carbohydrate": 230
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/api/user/food/{foodId}": {
+            "put": {
+                "tags": ["Diary"],
+                "summary": "Update food intake for a specific diary product",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "required": true,
+                        "type": "string",
+                        "description": "Bearer accessToken"
+                    },
+                    {
+                        "in": "path",
+                        "name": "foodId",
+                        "description": "ID of the food product to update",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "requestBody": {
+                    "description": "Food product object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FoodUpdateRequest"
+                            },
+                            "example": {
+                                "diary": "Lunch",
+                                "name": "mozzarella",
+                                "carbohydrate": 80,
+                                "protein": 100,
+                                "fat": 40,
+                                "calories": 1000
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful update of product",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FoodUpdateResponse"
+                                },
+                                "example": {
+                                    "_id": "6589eefc045d5d02bdadf353",
+                                    "diary": "Lunch",
+                                    "name": "mozzarella",
+                                    "carbohydrate": 80,
+                                    "protein": 100,
+                                    "fat": 40,
+                                    "calories": 1000,
+                                    "owner": "657cf97604acab43d153e36b",
+                                    "date": "25.12.2023",
+                                    "createdAt": "2023-12-25T21:07:08.585Z",
+                                    "updatedAt": "2023-12-25T23:55:25.122Z"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "content": {}
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Diary"],
+                "summary": "Deleting of food's intake from diary",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Authorization",
+                        "description": "Bearer accessToken",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "security": [{ "Bearer": [] }],
+                "responses": {
+                    "204": {
+                        "description": "Successful deleting of food's intake from diary",
+                        "content": {}
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {}
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {}
+                    },
+                    "500": {
+                        "description": "Server error",
+                        "content": {}
                     }
                 }
             }
@@ -1540,186 +1710,461 @@
                     }
                 }
             },
-
-            "WaterIntakeRequest": {
+            "GoalRequest-Response": {
                 "type": "object",
+                "title": "GoalRequest-Response",
                 "properties": {
-                    "value": {
-                        "type": "number",
-                        "description": "Value of water"
-                    }
-                },
-                "description": "Data for updating information about water intake."
-            },
-            "WaterIntakeResponse": {
-                "type": "object",
-                "properties": {
-                    "status": {
+                    "goal": {
                         "type": "string",
-                        "description": "The status of the response (e.g., 'success')."
-                    },
-                    "data": {
-                        "type": "object",
-                        "properties": {
-                            "date": {
-                                "type": "string",
-                                "description": "The date of the water intake."
-                            },
-                            "value": {
-                                "type": "number",
-                                "description": "The value of the water intake."
-                            }
-                        }
+                        "description": "User's new goal",
+                        "enum": ["Lose fat", "Gain muscle", "Maintain"],
+                        "required": true
                     }
                 }
             },
             "WeightRequest": {
                 "type": "object",
+                "title": "WeightRequest",
                 "properties": {
                     "weight": {
                         "type": "number",
-                        "description": "Value of weight"
+                        "description": "User's weight",
+                        "required": true
                     }
-                },
-                "description": "Data for updating information about weight."
+                }
             },
             "WeightResponse": {
                 "type": "object",
                 "properties": {
-                    "status": {
-                        "type": "string",
-                        "description": "The status of the response (e.g., 'success')."
-                    },
-                    "data": {
-                        "type": "object",
-                        "properties": {
-                            "date": {
-                                "type": "string",
-                                "description": "The date of the weight."
-                            },
-                            "weight": {
-                                "type": "number",
-                                "description": "The value of the weight."
-                            }
-                        }
-                    }
-                }
-            },
-            "GoalRequest": {
-                "type": "object",
-                "properties": {
-                    "goal": {
-                        "type": "string",
-                        "description": "Value of goal",
-                        "example": "Lose Fat",
-                        "enum": ["Lose Fat", "Gain Muscle", "Maintain Weight"]
-                    }
-                },
-                "description": "Data for updating information about goal."
-            },
-            "GoalResponse": {
-                "type": "object",
-                "properties": {
-                    "status": {
-                        "type": "string",
-                        "description": "The status of the response (e.g., 'success')."
-                    },
-                    "data": {
-                        "type": "object",
-                        "properties": {
-                            "goal": {
-                                "type": "string",
-                                "description": "The value of the goal.",
-                                "example": "Lose Fat",
-                                "enum": ["Lose Fat", "Gain Muscle", "Maintain Weight"]
-                            }
-                        }
-                    }
-                }
-            },
-            "FoodIntakeRequest": {
-                "type": "object",
-                "properties": {
-                    "type": {
-                        "type": "string",
-                        "description": "Type of food"
-                    },
-                    "product": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string",
-                                "description": "Name of the product"
-                            },
-                            "carbonohidrates": {
-                                "type": "number",
-                                "description": "Carbonohidrates content"
-                            },
-                            "protein": {
-                                "type": "number",
-                                "description": "Protein content"
-                            },
-                            "fat": {
-                                "type": "number",
-                                "description": "Fat content"
-                            },
-                            "calories": {
-                                "type": "number",
-                                "description": "Calories content"
-                            }
-                        }
-                    },
-                    "totalCalories": {
+                    "weight": {
                         "type": "number",
-                        "description": "Total calories"
-                    }
-                },
-                "description": "Data for updating information about food intake."
-            },
-            "FoodIntakeResponse": {
-                "type": "object",
-                "properties": {
-                    "status": {
-                        "type": "string",
-                        "description": "The status of the response (e.g., 'success')."
+                        "description": "User's weight"
                     },
-                    "data": {
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "type": "string",
-                                "description": "Type of food"
-                            },
-                            "product": {
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "description": "Name of the product"
-                                    },
-                                    "carbonohidrates": {
-                                        "type": "number",
-                                        "description": "Carbonohidrates content"
-                                    },
-                                    "protein": {
-                                        "type": "number",
-                                        "description": "Protein content"
-                                    },
-                                    "fat": {
-                                        "type": "number",
-                                        "description": "Fat content"
-                                    },
-                                    "calories": {
-                                        "type": "number",
-                                        "description": "Calories content"
-                                    }
+                    "owner": {
+                        "type": "string",
+                        "description": "ID of the owner"
+                    },
+                    "_id": {
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "ID of the weight entry"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "Date in the locale format"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Creation timestamp of mongoDB"
+                    }
+                }
+            },
+            "WaterRequest": {
+                "type": "object",
+                "title": "WaterRequest",
+                "properties": {
+                    "water": {
+                        "type": "number",
+                        "description": "Amount of water drunk",
+                        "required": true
+                    }
+                }
+            },
+            "WaterGetResponse": {
+                "type": "object",
+                "title": "WaterGetResponse",
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "ID of the water entry"
+                    },
+                    "water": {
+                        "type": "number",
+                        "description": "Amount of water drunk today"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "description": "Owner's water level ID"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "Date in the locale format"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date of water intake"
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date for updating water intake."
+                    }
+                }
+            },
+            "WaterUpdateResponse": {
+                "type": "object",
+                "title": "WaterUpdateResponse",
+                "properties": {
+                    "water": {
+                        "type": "number",
+                        "description": "User's new water level"
+                    }
+                }
+            },
+            "WaterResetResponse": {
+                "type": "object",
+                "title": "WaterResetResponse",
+                "properties": {
+                    "owner": {
+                        "type": "string",
+                        "description": "Owner's water level ID"
+                    },
+                    "water": {
+                        "type": "number",
+                        "description": "User's water level after reset"
+                    }
+                }
+            },
+
+            "FoodCreateRequest": {
+                "type": "object",
+                "title": "FoodCreateRequest",
+                "description": "Creating of food intake in the diary",
+                "properties": {
+                    "diary": {
+                        "type": "string",
+                        "enum": ["Breakfast", "Dinner", "Lunch", "Snack"],
+                        "description": "Food's intake in the diary",
+                        "required": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Name of meal",
+                        "required": true
+                    },
+                    "protein": {
+                        "type": "number",
+                        "description": "Amount of the protein",
+                        "required": true
+                    },
+                    "fat": {
+                        "type": "number",
+                        "description": "Amount of the fat",
+                        "required": true
+                    },
+                    "carbohydrate": {
+                        "type": "number",
+                        "description": "Amount of the carbohydrate",
+                        "required": true
+                    },
+                    "calories": {
+                        "type": "number",
+                        "description": "Amount of the calories",
+                        "required": true
+                    }
+                }
+            },
+            "FoodCreateResponse": {
+                "type": "object",
+                "title": "FoodCreateResponse",
+                "description": "Created food intake object",
+                "properties": {
+                    "diary": {
+                        "type": "string",
+                        "enum": ["Breakfast", "Dinner", "Lunch", "Snack"],
+                        "description": "Food's intake in the diary"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Name of meal"
+                    },
+                    "protein": {
+                        "type": "number",
+                        "description": "Amount of the protein"
+                    },
+                    "fat": {
+                        "type": "number",
+                        "description": "Amount of the fat"
+                    },
+                    "carbohydrate": {
+                        "type": "number",
+                        "description": "Amount of the carbohydrate"
+                    },
+                    "calories": {
+                        "type": "number",
+                        "description": "Amount of the calories"
+                    },
+                    "_id": {
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "ID of the diary entry"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "description": "Diary owner's ID"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "Date in the locale format"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date of diary intake"
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date for updating diary intake."
+                    }
+                }
+            },
+            "FoodGetResponse": {
+                "type": "object",
+                "title": "FoodGetResponse",
+                "description": "Getting food's diary today",
+                "properties": {
+                    "Breakfast": {
+                        "type": "array",
+                        "description": "Breakfast today array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "description": "ID of breakfast intake"
+                                },
+                                "diary": {
+                                    "type": "string",
+                                    "enum": ["Breakfast"],
+                                    "description": "Food's intake in the diary"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of meal"
+                                },
+                                "protein": {
+                                    "type": "number",
+                                    "description": "Amount of the protein"
+                                },
+                                "fat": {
+                                    "type": "number",
+                                    "description": "Amount of the fat"
+                                },
+                                "carbohydrate": {
+                                    "type": "number",
+                                    "description": "Amount of the carbohydrate"
+                                },
+                                "calories": {
+                                    "type": "number",
+                                    "description": "Amount of the calories"
                                 }
-                            },
-                            "totalCalories": {
-                                "type": "number",
-                                "description": "Total calories"
                             }
                         }
+                    },
+                    "Dinner": {
+                        "type": "array",
+                        "description": "Dinner today array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "description": "ID of dinner intake"
+                                },
+                                "diary": {
+                                    "type": "string",
+                                    "enum": ["Dinner"],
+                                    "description": "Food's intake in the diary"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of meal"
+                                },
+                                "protein": {
+                                    "type": "number",
+                                    "description": "Amount of the protein"
+                                },
+                                "fat": {
+                                    "type": "number",
+                                    "description": "Amount of the fat"
+                                },
+                                "carbohydrate": {
+                                    "type": "number",
+                                    "description": "Amount of the carbohydrate"
+                                },
+                                "calories": {
+                                    "type": "number",
+                                    "description": "Amount of the calories"
+                                }
+                            }
+                        }
+                    },
+                    "Lunch": {
+                        "type": "array",
+                        "description": "Lunch today array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "description": "ID of lunch intake"
+                                },
+                                "diary": {
+                                    "type": "string",
+                                    "enum": ["Lunch"],
+                                    "description": "Food's intake in the diary"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of meal"
+                                },
+                                "protein": {
+                                    "type": "number",
+                                    "description": "Amount of the protein"
+                                },
+                                "fat": {
+                                    "type": "number",
+                                    "description": "Amount of the fat"
+                                },
+                                "carbohydrate": {
+                                    "type": "number",
+                                    "description": "Amount of the carbohydrate"
+                                },
+                                "calories": {
+                                    "type": "number",
+                                    "description": "Amount of the calories"
+                                }
+                            }
+                        }
+                    },
+                    "Snack": {
+                        "type": "array",
+                        "description": "Snack today array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "description": "ID of snack intake"
+                                },
+                                "diary": {
+                                    "type": "string",
+                                    "enum": ["Snack"],
+                                    "description": "Food's intake in the diary"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "Name of meal"
+                                },
+                                "protein": {
+                                    "type": "number",
+                                    "description": "Amount of the protein"
+                                },
+                                "fat": {
+                                    "type": "number",
+                                    "description": "Amount of the fat"
+                                },
+                                "carbohydrate": {
+                                    "type": "number",
+                                    "description": "Amount of the carbohydrate"
+                                },
+                                "calories": {
+                                    "type": "number",
+                                    "description": "Amount of the calories"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "FoodUpdateRequest": {
+                "type": "object",
+                "title": "FoodUpdateRequest",
+                "description": "Update food intake by ID",
+                "properties": {
+                    "diary": {
+                        "type": "string",
+                        "enum": ["Breakfast", "Dinner", "Lunch", "Snack"],
+                        "description": "Food's intake in the diary"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Name of meal"
+                    },
+                    "protein": {
+                        "type": "number",
+                        "description": "Amount of the protein"
+                    },
+                    "fat": {
+                        "type": "number",
+                        "description": "Amount of the fat"
+                    },
+                    "carbohydrate": {
+                        "type": "number",
+                        "description": "Amount of the carbohydrate"
+                    },
+                    "calories": {
+                        "type": "number",
+                        "description": "Amount of the calories"
+                    }
+                }
+            },
+            "FoodUpdateResponse": {
+                "type": "object",
+                "title": "FoodUpdateResponse",
+                "description": "Getting updated food's intake today",
+                "properties": {
+                    "diary": {
+                        "type": "string",
+                        "enum": ["Breakfast", "Dinner", "Lunch", "Snack"],
+                        "description": "Food's intake in the diary"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Name of meal"
+                    },
+                    "protein": {
+                        "type": "number",
+                        "description": "Amount of the protein"
+                    },
+                    "fat": {
+                        "type": "number",
+                        "description": "Amount of the fat"
+                    },
+                    "carbohydrate": {
+                        "type": "number",
+                        "description": "Amount of the carbohydrate"
+                    },
+                    "calories": {
+                        "type": "number",
+                        "description": "Amount of the calories"
+                    },
+                    "_id": {
+                        "type": "string",
+                        "format": "ObjectId",
+                        "description": "ID of the diary entry"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "description": "Diary owner's ID"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "Date in the locale format"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date of diary intake"
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Date for updating diary intake."
                     }
                 }
             },

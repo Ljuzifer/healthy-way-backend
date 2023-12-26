@@ -51,13 +51,13 @@ const resetWaterToday = async (req, res) => {
     const waterLevel = await Water.findOne({ owner, date: currentDate }).exec();
 
     if (!waterLevel) {
-        throw HttpError(404, `You didn't enter water today...:(`);
+        throw HttpError(404);
     }
 
     const { _id } = waterLevel;
     const level = await Water.findByIdAndUpdate({ _id, date: currentDate }, { water: 0 }, { new: true }).exec();
 
-    res.status(200).json({
+    res.status(204).json({
         owner: level._id,
         water: level.water,
     });
