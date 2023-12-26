@@ -230,7 +230,7 @@ async function removeUser(req, res) {
     await Water.deleteMany({ owner: user._id });
     await Food.deleteMany({ owner: user._id });
 
-    res.status(204).json({ message: "User credentials removed successful!" });
+    res.status(204).json({ message: "User's credentials removed successful!" });
 }
 
 module.exports = {
