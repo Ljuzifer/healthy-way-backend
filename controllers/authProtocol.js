@@ -126,8 +126,8 @@ async function logout(req, res) {
 
     await User.findByIdAndUpdate(_id, { accessToken: "", refreshToken: "" }, { new: true }).exec();
 
-    res.status(204).json({
-        message: "Logout successfull",
+    res.status(200).json({
+        message: "You've logout successful",
     });
 }
 
