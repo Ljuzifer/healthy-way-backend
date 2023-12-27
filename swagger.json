@@ -360,7 +360,7 @@
                         }
                     },
                     "401": {
-                        "description": "Unauthorized",
+                        "description": "Email or password are incorrect",
                         "content": {}
                     },
                     "403": {
@@ -368,7 +368,7 @@
                         "content": {}
                     },
                     "404": {
-                        "description": "Email or password are incorrect",
+                        "description": "Not found",
                         "content": {}
                     }
                 }

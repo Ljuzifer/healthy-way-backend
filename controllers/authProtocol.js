@@ -62,7 +62,12 @@ async function confirmEmail(req, res) {
         verificationToken: "",
     });
 
-    res.status(200).json({ message: "Email was confirm successful!" });
+    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
+
+    // res.redirect("Location", loginPage);
+
+    // res.status(302).json({ message: "Email was confirm successful!" }).redirect(loginPage);
+    res.redirect(302, loginPage);
 }
 
 async function resendConfirmEmail(req, res) {
@@ -187,11 +192,11 @@ async function changePassword(req, res) {
     const user = await User.findOne({ email });
 
     if (!user) {
-        throw HttpError(404, "Email or password are incorrect");
+        throw HttpError(401, "Email or password are incorrect");
     }
     const userPassword = await bcrypt.compare(password, user.password);
     if (!userPassword) {
-        throw HttpError(404, "Email or password are incorrect");
+        throw HttpError(401, "Email or password are incorrect");
     }
 
     const salt = bcrypt.genSaltSync(13);
