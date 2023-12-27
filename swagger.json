@@ -202,8 +202,8 @@
                     }
                 ],
                 "responses": {
-                    "200": {
-                        "description": "Email verification successful",
+                    "302": {
+                        "description": "Temporary Redirect (Email verification successful)",
                         "content": {
                             "application/json": {
                                 "schema": {

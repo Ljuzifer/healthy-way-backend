@@ -52,9 +52,14 @@ const registration = async (req, res) => {
 async function confirmEmail(req, res) {
     const { verificationToken } = req.params;
     const user = await User.findOne({ verificationToken });
+    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
+
+    let message = "";
 
     if (!user) {
-        throw HttpError(404, "User not found or email was confirmed already");
+        message = "User not found or email was confirmed already";
+        res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
+        // throw HttpError(404, "User not found or email was confirmed already");
     }
 
     await User.findByIdAndUpdate(user._id, {
@@ -62,12 +67,11 @@ async function confirmEmail(req, res) {
         verificationToken: "",
     });
 
-    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
-
     // res.redirect("Location", loginPage);
 
     // res.status(302).json({ message: "Email was confirm successful!" }).redirect(loginPage);
-    res.redirect(302, loginPage);
+    message = "Email was confirm successful!";
+    res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
 }
 
 async function resendConfirmEmail(req, res) {
@@ -89,7 +93,11 @@ async function resendConfirmEmail(req, res) {
 
     await EmailSender(email, user.verificationToken);
 
-    res.status(200).json({ message: "Email was confirmed successful!" });
+    // res.status(200).json({ message: "Email was confirmed successful!" });
+    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
+    let message = "";
+    message = "Email was confirm successful!";
+    res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
 }
 
 // signin //
