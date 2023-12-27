@@ -360,11 +360,15 @@
                         }
                     },
                     "401": {
-                        "description": "Email or password are incorrect",
+                        "description": "Unauthorized",
                         "content": {}
                     },
                     "403": {
                         "description": "Password change is failed...",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Email or password are incorrect",
                         "content": {}
                     }
                 }
@@ -1233,6 +1237,13 @@
                         "in": "header",
                         "name": "Authorization",
                         "description": "Bearer accessToken",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "foodId",
+                        "description": "ID of the food product to delete",
                         "required": true,
                         "type": "string"
                     }

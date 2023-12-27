@@ -187,11 +187,11 @@ async function changePassword(req, res) {
     const user = await User.findOne({ email });
 
     if (!user) {
-        throw HttpError(401, "Email or password are incorrect");
+        throw HttpError(404, "Email or password are incorrect");
     }
     const userPassword = await bcrypt.compare(password, user.password);
     if (!userPassword) {
-        throw HttpError(401, "Email or password are incorrect");
+        throw HttpError(404, "Email or password are incorrect");
     }
 
     const salt = bcrypt.genSaltSync(13);

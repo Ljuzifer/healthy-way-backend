@@ -6,6 +6,6 @@ const { goalSchema } = require("../../schemas/ValidationUser");
 const router = Router();
 const parseJSON = json();
 
-router.put("/", parseJSON, JoiValidate(goalSchema), authentification, mode.updateUserGoal);
+router.put("/", parseJSON, authentification, JoiValidate(goalSchema), mode.updateUserGoal);
 
 module.exports = router;

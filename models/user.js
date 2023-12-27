@@ -4,6 +4,10 @@ const gravatar = require("gravatar");
 const LocaleDate = require("../helpers/LocaleDate");
 const IdentifyMacros = require("../helpers/IdentifyMacros");
 
+const GOAL = ["Lose fat", "Maintain", "Gain muscle"];
+const GENDER = ["Male", "Female"];
+const ACTIVITY = [1.2, 1.375, 1.55, 1.725, 1.9];
+
 const userSchema = new Schema(
     {
         name: {
@@ -31,12 +35,12 @@ const userSchema = new Schema(
         },
         goal: {
             type: String,
-            enum: ["Lose fat", "Maintain", "Gain muscle"],
+            enum: GOAL,
             required: true,
         },
         gender: {
             type: String,
-            enum: ["Male", "Female"],
+            enum: GENDER,
             required: true,
         },
         age: {
@@ -53,7 +57,7 @@ const userSchema = new Schema(
         },
         activityRatio: {
             type: Number,
-            enam: [1.2, 1.375, 1.55, 1.725, 1.9],
+            enam: ACTIVITY,
             required: true,
         },
         BMR: {

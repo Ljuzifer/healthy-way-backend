@@ -82,10 +82,11 @@ const updateFoodDiary = async (req, res) => {
 
 const deleteFoodDiary = async (req, res) => {
     const { foodId } = req.params;
+    const { _id } = req.user;
 
     const delDiary = await Food.findByIdAndDelete(foodId, { new: true }).exec();
 
-    if (!delDiary) {
+    if (!delDiary || delDiary.owner !== _id) {
         throw HttpError(404);
     }
 
