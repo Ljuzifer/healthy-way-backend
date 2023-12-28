@@ -1,36 +1,26 @@
-<style>
-   body {
-      font-family: "Arial", sans-serif;
-      background-color: #f0f0f0;
-   }
-
-   h1 {
-      color: #0066cc;
-   }
-
-   /* Інші стилі... */
-</style>
-
-<center>
-
 # **Healthy Way App** backend
+
+<h1 style="text-aligh: center;">Healthy Way App backend</h1>
 
 ---
 
-</center>
-
-![windows](./public/icons/windows%20(1).svg =100\*100) ![node.js](./public/icons/nodejs.png)
+![windows](<./public/icons/windows%20(1).svg>) ![node.js](./public/icons/nodejs.png)
 ![express](./public/icons/express.png) ![mongodb](./public/icons/mongodb.png) ![win10](./public/icons/windows.png)
-![win](./public/icons/windows.svg =100) ![js](./public/icons/icons8-js.svg = 100\*100)
+![win](./public/icons/windows.svg) ![js](./public/icons/icons8-js.svg)
 
+<div style="text-align: center;">
+    <img src="./public/icons/windows%20(1).svg" style="max-width: 100%; height: auto;" /> 
+    <img src="./public/icons/nodejs.png" style="max-width: 100%; height: auto;" />
+    <img src="./public/icons/express.png" style="max-width: 100%; height: auto;" />
+    <img src="./public/icons/mongodb.png" style="max-width: 100%; height: auto;" />
+    <img src="./public/icons/windows.png" style="max-width: 100%; height: auto;" />
+    <img src="./public/icons/windows.svg" style="max-width: 100%; height: auto;" />
+    <img src="./public/icons/icons8-js.svg" style="max-width: 100%; height: auto;" />
+</div>
 ---
 
 ## [BASE Render URL](https://healthy-way-app.onrender.com)
 
 ---
 
-<center>
-
 ## [SWAGGER API Documentations](https://healthy-way-app.onrender.com/api-skeleton)
-
-</center>
