@@ -4,7 +4,7 @@
 HEALTY WAY APP <p style="color: yellow">backend</p> <img src="./public/icons/icons8-code-64.png" />
 </h1>
 
-<div align="center" style="color: #694e04; font-family: Roboto Mono,Consolas,Liberation Mono,Courier New,Courier,monospace;
+<div align="center" color="#694e04" style="color: #694e04; font-family: Roboto Mono,Consolas,Liberation Mono,Courier New,Courier,monospace;
     font-size: 22px;
     font-weight: 500;">
 Welcome to the Healthy Way App DARK SIDE!
