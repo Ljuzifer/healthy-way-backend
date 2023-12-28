@@ -40,7 +40,7 @@ Welcome to the Healthy Way App DARK SIDE!
 
 <div align="center">
 <a href="https://healthy-way-app.onrender.com/api-skeleton" target="_blank" rel="noreferrer noopener">
-<h3>SWAGGER API Documentations</h3>
+<b>SWAGGER API Documentations</b>
 </a>
 </div>
 
