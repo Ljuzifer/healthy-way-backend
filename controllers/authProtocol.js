@@ -77,13 +77,19 @@ async function confirmEmail(req, res) {
 async function resendConfirmEmail(req, res) {
     const { email } = req.body;
     const user = await User.findOne({ email });
+    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
+    let message = "";
 
     if (!user) {
-        throw HttpError(404, "User not found...");
+        message = "That user not found!";
+        res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
+        // throw HttpError(404, "User not found...");
     }
 
     if (user.verify) {
-        throw HttpError(400, "This email is verified already!");
+        message = "This email is verified already!";
+        res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
+        // throw HttpError(400, "This email is verified already!");
     }
 
     await User.findByIdAndUpdate(user._id, {
@@ -94,10 +100,9 @@ async function resendConfirmEmail(req, res) {
     await EmailSender(email, user.verificationToken);
 
     // res.status(200).json({ message: "Email was confirmed successful!" });
-    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
-    let message = "";
+
     message = "Email was confirm successful!";
-    res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
+    res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
 }
 
 // signin //

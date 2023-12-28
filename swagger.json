@@ -246,8 +246,8 @@
                     }
                 },
                 "responses": {
-                    "200": {
-                        "description": "Verification email resent successfully",
+                    "307": {
+                        "description": "(Verification email resent successful)",
                         "content": {
                             "application/json": {
                                 "schema": {
