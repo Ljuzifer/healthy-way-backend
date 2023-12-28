@@ -19,9 +19,9 @@
 
 </center>
 
-![windows](./public/icons/windows%20(1).svg =400\*400) ![node.js](./public/icons/nodejs.png)
+![windows](./public/icons/windows%20(1).svg =100\*100) ![node.js](./public/icons/nodejs.png)
 ![express](./public/icons/express.png) ![mongodb](./public/icons/mongodb.png) ![win10](./public/icons/windows.png)
-![win](./public/icons/windows.svg =400)
+![win](./public/icons/windows.svg =100) ![js](./public/icons/icons8-js.svg = 100\*100)
 
 ---
 
