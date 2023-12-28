@@ -16,7 +16,7 @@ Welcome to the Healthy Way App DARK SIDE!
 <img src="./public/icons/windows.svg" width="220"/>
 </div>
 
-<div style="align: center;margin-left: auto; margin-right: auto; width: fit-content;">
+<div align="center" style="margin-left: auto; margin-right: auto; width: fit-content;">
 <a><img src="./public/icons/icons8-js.svg" width="50"/></a>
 <a><img src="./public/icons/nodejs.svg" width="50"/></a>
 <a><img src="./public/icons/express-js.svg" width="50"/></a>
