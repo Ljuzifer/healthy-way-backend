@@ -5,8 +5,8 @@ const crypto = require("node:crypto");
 const { HttpError, MethodWrapper, EmailSender, ForgotPassSender, GenerateRandomPassword } = require("../helpers");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
+const mainLink = "https://tasitaforme.github.io/healthy-way";
 
-// SignUp //
 const registration = async (req, res) => {
     const { name, email, password } = req.body;
     const user = await User.findOne({ email }).exec();
@@ -48,18 +48,15 @@ const registration = async (req, res) => {
     });
 };
 
-// Mail Confirm //
 async function confirmEmail(req, res) {
     const { verificationToken } = req.params;
     const user = await User.findOne({ verificationToken });
-    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
 
     let message = "";
 
     if (!user) {
         message = "User not found or email was confirmed already";
-        res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
-        // throw HttpError(404, "User not found or email was confirmed already");
+        res.redirect(302, `${mainLink}/signup?message=${encodeURIComponent(message)}`);
     }
 
     await User.findByIdAndUpdate(user._id, {
@@ -67,29 +64,24 @@ async function confirmEmail(req, res) {
         verificationToken: "",
     });
 
-    // res.redirect("Location", loginPage);
-
-    // res.status(302).json({ message: "Email was confirm successful!" }).redirect(loginPage);
     message = "Email was confirm successful!";
-    res.redirect(302, `${loginPage}?message=${encodeURIComponent(message)}`);
+    res.redirect(302, `${mainLink}/signin?message=${encodeURIComponent(message)}`);
 }
 
 async function resendConfirmEmail(req, res) {
     const { email } = req.body;
     const user = await User.findOne({ email });
-    const loginPage = "https://tasitaforme.github.io/healthy-way/signin";
+
     let message = "";
 
     if (!user) {
         message = "That user not found!";
-        res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
-        // throw HttpError(404, "User not found...");
+        res.redirect(307, `${mainLink}/signup?message=${encodeURIComponent(message)}`);
     }
 
     if (user.verify) {
         message = "This email is verified already!";
-        res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
-        // throw HttpError(400, "This email is verified already!");
+        res.redirect(307, `${mainLink}/signin?message=${encodeURIComponent(message)}`);
     }
 
     await User.findByIdAndUpdate(user._id, {
@@ -99,13 +91,10 @@ async function resendConfirmEmail(req, res) {
 
     await EmailSender(email, user.verificationToken);
 
-    // res.status(200).json({ message: "Email was confirmed successful!" });
-
     message = "Email was confirm successful!";
-    res.redirect(307, `${loginPage}?message=${encodeURIComponent(message)}`);
+    res.redirect(307, `${mainLink}/signin?message=${encodeURIComponent(message)}`);
 }
 
-// signin //
 async function login(req, res) {
     const { email, password } = req.body;
 

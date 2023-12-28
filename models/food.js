@@ -2,87 +2,13 @@ const { Schema, model } = require("mongoose");
 const { MongooseError } = require("../helpers");
 const LocaleDate = require("../helpers/LocaleDate");
 
-// const diarySchema = new Schema({
-//     dishes: [
-//         {
-//             name: "breakfast",
-//             ratio: [
-//                 {
-//                     name: "Салат",
-//                     carbonohidrates: 10,
-//                     protein: 10,
-//                     fat: 10,
-//                     calories: 10,
-//                 },
-//             ],
-//         },
-
-//         {
-//             name: "lunch",
-//             ratio: [
-//                 {
-//                     name: "Салат",
-//                     carbonohidrates: 10,
-//                     protein: 10,
-//                     fat: 10,
-//                     calories: 10,
-//                 },
-//             ],
-//         },
-
-//         {
-//             name: "dinner",
-//             ratio: [
-//                 {
-//                     name: "Салат",
-//                     carbonohidrates: 10,
-//                     protein: 10,
-//                     fat: 10,
-//                     calories: 10,
-//                 },
-//             ],
-//         },
-
-//         {
-//             name: "snack",
-//             ratio: [
-//                 {
-//                     name: "Салат",
-//                     carbonohidrates: 10,
-//                     protein: 10,
-//                     fat: 10,
-//                     calories: 10,
-//                 },
-//             ],
-//         },
-//     ],
-
-//     amount: [
-//         {
-//             name: "calories",
-//             total: 20,
-//         },
-
-//         {
-//             name: "carbonohidrates",
-//             total: 20,
-//         },
-//         {
-//             name: "protein",
-//             total: 20,
-//         },
-//         {
-//             name: "fat",
-//             total: 20,
-//         },
-//     ],
-// });
+const DIARY = ["Breakfast", "Lunch", "Dinner", "Snack"];
 
 const foodSchema = new Schema(
     {
         diary: {
             type: String,
-            enum: ["Breakfast", "Lunch", "Dinner", "Snack"],
+            enum: DIARY,
             required: true,
         },
         name: {
