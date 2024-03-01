@@ -153,8 +153,8 @@ async function refresh(req, res) {
             id,
             name: isExist.name,
         };
-        const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "22d" });
-        const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "44d" });
+        const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
+        const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
 
         await User.findByIdAndUpdate(id, { accessToken, refreshToken });
 
