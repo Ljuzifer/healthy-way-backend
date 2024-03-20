@@ -5,7 +5,7 @@ const crypto = require("node:crypto");
 const { HttpError, MethodWrapper, EmailSender, ForgotPassSender, GenerateRandomPassword } = require("../helpers");
 
 const { JWT_ACCESS_KEY, JWT_REFRESH_KEY } = process.env;
-const mainLink = "https://tasitaforme.github.io/healthy-way";
+const mainLink = "https://ljuzifer.github.io/healthy-way-frontend";
 
 const registration = async (req, res) => {
     const { name, email, password } = req.body;
@@ -154,7 +154,7 @@ async function refresh(req, res) {
             name: isExist.name,
         };
         const accessToken = jwt.sign(payload, JWT_ACCESS_KEY, { expiresIn: "13m" });
-        const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13d" });
+        const refreshToken = jwt.sign(payload, JWT_REFRESH_KEY, { expiresIn: "13m" });
 
         await User.findByIdAndUpdate(id, { accessToken, refreshToken });
 
