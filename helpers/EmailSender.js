@@ -75,7 +75,7 @@ async function ForgotPassSender(mail, password, name) {
             transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
             "
           target="_blank"
-          href="https://tasitaforme.github.io/healthy-way/signin"
+          href="https://ljuzifer.github.io/healthy-way/signin"
           >Healthy Way App</a
         >
         <br />
